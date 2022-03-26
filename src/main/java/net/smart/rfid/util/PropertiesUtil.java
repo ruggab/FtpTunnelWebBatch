@@ -12,6 +12,7 @@ public class PropertiesUtil {
 	private static String password;
 	private static String pathDestination;
 	private static String pathLocal;
+	private static String trashPath;
 	private static String hostIp;
 	private static String hostPort;
 
@@ -69,6 +70,14 @@ public class PropertiesUtil {
 
 	public void setPathLocal(String pathLocal) {
 		this.pathLocal = pathLocal;
+	}
+
+	public static String getTrashPath() {
+		return trashPath;
+	}
+
+	public  void setTrashPath(String trashPath) {
+		this.trashPath = trashPath;
 	}
 	
 	

@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import net.smart.rfid.tunnel.db.entity.DataClient;
 import net.smart.rfid.tunnel.db.repository.DataClientRepository;
@@ -19,6 +20,9 @@ public class DataService {
 
 	private static final Logger logger = LoggerFactory.getLogger(DataService.class);
 
+	public static String currentShipCode = "";
+	public static Long shipSeq = new Long(0);
+	
 	@Autowired
 	private ReaderStreamRepository readerStreamRepository;
 	
@@ -39,10 +43,37 @@ public class DataService {
 			dataClient.setTid(readerStreamOnly.getTid());
 			dataClient.setPackId(readerStreamOnly.getPackId());
 			dataClient.setTimeStamp(readerStreamOnly.getTimeStamp());
+			if (StringUtils.hasText(currentShipCode)) {
+				dataClient.setShipCode(currentShipCode);
+				dataClient.setShipSeq(shipSeq);
+			}
 			dataClientRepository.save(dataClient);
 		}
-		
+		//La seq è incrementata ad ogni nuovo package
+		shipSeq = shipSeq + 1;
 		return listReaderStream;
 	}
+	
+	
+	@Transactional
+	public Long getMaxShipSeqByShipCode(String shipCode) throws Exception {
+		//
+		Long  maxShip = readerStreamRepository.getMaxShipSeqByShipCode(shipCode);
+		
+		return maxShip;
+	}
+	
+	@Transactional
+	public List<DataClient> findByShipCodeOrderByShipSeq(String shipCode) throws Exception {
+		//
+		List<DataClient> listClinetData = dataClientRepository.findByShipCodeOrderByShipSeq(shipCode);
+		
+		return listClinetData;
+	}
+	
+	
+	
+	
+	
 
 }

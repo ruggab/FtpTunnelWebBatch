@@ -37,6 +37,10 @@ public class DataClient {
 
 	private String sku;
 
+	private String shipCode;
+
+	private Long shipSeq;
+
 	public DataClient() {
 	}
 
@@ -76,7 +80,6 @@ public class DataClient {
 		return formattedDate;
 	}
 
-	
 	public String getEpc() {
 		return epc;
 	}
@@ -116,8 +119,21 @@ public class DataClient {
 	public void setPackId(Long packId) {
 		this.packId = packId;
 	}
-	
-	
-	
+
+	public String getShipCode() {
+		return shipCode;
+	}
+
+	public void setShipCode(String shipCode) {
+		this.shipCode = shipCode;
+	}
+
+	public Long getShipSeq() {
+		return shipSeq;
+	}
+
+	public void setShipSeq(Long shipSeq) {
+		this.shipSeq = shipSeq;
+	}
 
 }
