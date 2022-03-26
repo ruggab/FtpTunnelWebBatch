@@ -1,0 +1,48 @@
+2022-03-26 08:11:45,538 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FtpApplication using Java 1.8.0_211 on GABRIELE-PC with PID 22520 (C:\Workspaces\FtpTunnelWebBatch\target\classes started by Gabriele in C:\Workspaces\FtpTunnelWebBatch)
+2022-03-26 08:11:45,539 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-26 08:11:45,802 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-26 08:11:45,829 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2022-03-26 08:11:46,026 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9000 (http)
+2022-03-26 08:11:46,027 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-9000"]
+2022-03-26 08:11:46,028 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-03-26 08:11:46,028 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-26 08:11:46,054 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-26 08:11:46,054 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 511 ms
+2022-03-26 08:11:46,092 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-26 08:11:46,098 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2022-03-26 08:11:46,146 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2022-03-26 08:11:46,147 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-26 08:11:46,221 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-26 08:11:46,222 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 08:11:46,382 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-26 08:11:46,529 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2022-03-26 08:11:46,531 INFO org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-03-26 08:11:46,531 INFO org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2022-03-26 08:11:46,531 INFO org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2022-03-26 08:11:46,531 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-03-26 08:11:46,531 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-03-26 08:11:46,531 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2022-03-26 08:11:46,532 INFO org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4498a5fc
+2022-03-26 08:11:46,549 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-26 08:11:46,562 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-9000"]
+2022-03-26 08:11:46,565 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9000 (http) with context path ''
+2022-03-26 08:11:46,565 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2022-03-26 08:11:46,566 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-03-26 08:11:46,571 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FtpApplication in 1.084 seconds (JVM running for 3585.341)
+2022-03-26 08:11:46,574 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-03-26 08:11:47,935 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(64)-127.0.0.1] Application shutdown requested.
+2022-03-26 08:11:47,938 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(64)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-03-26 08:11:48,257 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [RMI TCP Connection(64)-127.0.0.1] Shutting down Quartz Scheduler
+2022-03-26 08:11:48,257 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(64)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-03-26 08:11:48,258 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(64)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-03-26 08:11:48,258 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(64)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-03-26 08:11:48,260 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(64)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 08:11:48,262 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(64)-127.0.0.1] HikariPool-2 - Shutdown initiated...
+2022-03-26 08:11:48,271 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(64)-127.0.0.1] HikariPool-2 - Shutdown completed.
