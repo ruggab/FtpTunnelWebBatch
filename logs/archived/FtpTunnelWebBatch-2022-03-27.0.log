@@ -1,0 +1,1580 @@
+2022-03-27 22:16:12,385 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FtpApplication using Java 1.8.0_211 on GABRIELE-PC with PID 11300 (C:\Workspaces\FtpTunnelWebBatch\target\classes started by Gabriele in C:\Workspaces\FtpTunnelWebBatch)
+2022-03-27 22:16:12,389 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 22:16:12,483 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 22:16:12,485 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 22:16:13,501 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 22:16:13,741 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 228 ms. Found 3 JPA repository interfaces.
+2022-03-27 22:16:14,635 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 22:16:14,735 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-03-27 22:16:15,011 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 22:16:15,185 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 22:16:15,331 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 22:16:15,397 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-27 22:16:16,403 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 22:16:16,416 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 22:16:17,543 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2022-03-27 22:16:17,896 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2022-03-27 22:16:17,914 INFO org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-03-27 22:16:17,914 INFO org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2022-03-27 22:16:17,915 INFO org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2022-03-27 22:16:17,916 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-03-27 22:16:17,917 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-03-27 22:16:17,917 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2022-03-27 22:16:17,917 INFO org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5a0d92df
+2022-03-27 22:16:18,787 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 9000
+2022-03-27 22:16:18,989 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2022-03-27 22:16:18,990 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-03-27 22:16:18,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:16:19,001 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FtpApplication in 7.313 seconds (JVM running for 8.754)
+2022-03-27 22:16:20,293 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:16:20,295 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:16:29,006 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:16:29,710 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:16:29,711 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:16:39,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:16:39,660 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:16:39,661 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:16:48,999 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:16:49,685 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:16:49,685 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:16:59,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:16:59,789 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:16:59,790 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:17:08,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:17:09,583 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:17:09,583 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:17:19,011 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:17:19,497 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:17:19,497 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:17:29,011 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:17:29,620 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:17:29,621 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:17:39,007 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:17:39,535 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:17:39,536 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:17:48,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:17:50,281 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:17:50,281 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:17:58,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:17:59,655 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:17:59,657 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:18:09,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:18:09,673 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:18:09,673 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:18:19,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:18:19,677 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:18:19,679 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:18:29,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:18:29,578 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:18:29,579 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:18:39,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:18:39,609 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:18:39,610 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:18:49,003 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:18:49,662 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:18:49,662 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:18:59,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:18:59,713 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:18:59,713 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:19:08,999 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:19:09,557 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:19:09,557 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:19:19,014 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:19:19,662 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:19:19,663 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:19:29,011 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:19:29,603 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:19:29,603 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:19:39,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:19:39,646 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:19:39,647 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:19:49,014 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:19:49,662 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:19:49,662 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:19:59,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:19:59,642 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:19:59,644 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:20:08,999 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:20:09,736 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:20:09,736 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:20:19,007 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:20:19,693 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:20:19,694 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:20:29,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:20:29,522 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:20:29,523 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:20:39,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:20:39,562 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:20:39,563 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:20:49,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:20:49,822 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:20:49,822 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:20:59,010 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:20:59,639 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:20:59,640 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:21:08,999 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:21:09,725 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:21:09,725 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:21:19,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:21:19,622 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:21:19,623 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:21:29,011 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:21:29,654 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:21:29,655 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:21:39,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:21:39,650 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:21:39,651 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:21:49,006 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:21:49,623 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:21:49,623 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:21:58,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:21:59,658 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:21:59,658 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:22:09,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:22:09,560 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:22:09,560 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:22:19,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:22:19,713 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:22:19,714 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:22:29,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:22:29,525 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:22:29,525 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:22:39,010 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:22:39,697 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:22:39,699 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:22:49,001 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:22:49,551 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:22:49,551 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:22:59,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:22:59,658 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:22:59,659 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:23:09,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:23:09,520 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:23:09,521 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:23:19,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:23:19,557 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:23:19,558 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:23:29,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:23:29,553 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:23:29,553 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:23:39,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:23:39,608 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:23:39,610 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:23:49,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:23:49,580 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:23:49,581 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:23:59,001 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:23:59,658 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:23:59,659 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:24:09,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:24:09,726 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:24:09,727 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:24:19,003 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:24:19,710 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:24:19,710 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:24:29,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:24:29,597 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:24:29,597 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:24:38,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:24:39,548 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:24:39,549 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:24:49,003 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:24:49,485 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:24:49,486 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:24:59,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:24:59,611 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:24:59,612 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:25:09,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:25:09,694 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:25:09,694 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:25:18,999 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:25:19,659 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:25:19,659 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:25:29,003 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:25:29,580 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:25:29,580 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:25:39,009 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:25:39,669 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:25:39,670 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:25:49,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:25:49,682 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:25:49,682 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:25:59,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:25:59,763 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:25:59,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:26:09,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:26:09,688 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:26:09,689 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:26:19,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:26:19,701 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:26:19,701 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:26:29,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:26:29,566 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:26:29,567 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:26:39,010 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:26:39,668 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:26:39,669 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:26:48,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:26:49,633 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:26:49,634 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:26:59,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:26:59,665 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:26:59,666 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:27:09,011 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:27:09,560 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:27:09,560 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:27:19,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:27:19,652 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:27:19,653 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:27:29,001 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:27:29,623 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:27:29,623 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:27:39,003 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:27:39,706 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:27:39,707 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:27:49,009 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:27:49,478 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:27:49,478 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:27:59,006 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:27:59,683 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:27:59,684 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:28:09,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:28:09,668 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:28:09,669 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:28:19,001 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:28:19,668 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:28:19,669 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:28:29,011 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:28:29,739 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:28:29,739 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:28:39,009 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:28:39,648 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:28:39,649 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:28:49,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:28:49,640 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:28:49,641 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:28:59,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:28:59,713 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:28:59,714 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:29:09,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:29:09,537 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:29:09,538 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:29:19,010 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:29:19,655 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:29:19,656 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:29:29,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:29:29,581 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:29:29,581 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:29:39,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:29:39,699 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:29:39,700 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:29:49,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:29:49,615 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:29:49,615 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:29:58,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:29:59,700 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:29:59,700 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:30:09,011 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:30:09,758 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:30:09,758 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:30:18,999 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:30:19,592 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:30:19,593 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:30:29,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:30:29,743 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:30:29,744 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:30:39,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:30:39,555 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:30:39,556 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:30:49,010 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:30:49,478 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:30:49,479 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:30:59,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:30:59,654 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:30:59,655 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:31:09,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:31:09,463 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:31:09,463 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:31:19,006 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:31:19,632 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:31:19,633 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:31:29,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:31:29,662 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:31:29,663 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:31:39,007 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:31:39,703 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:31:39,704 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:31:49,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:31:49,663 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:31:49,663 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:31:59,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:31:59,577 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:31:59,578 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:32:09,010 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:32:09,702 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:32:09,702 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:32:18,998 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:32:19,566 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:32:19,567 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:32:29,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:32:29,489 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:32:29,490 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:32:39,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:32:39,608 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:32:39,608 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:32:49,006 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:32:49,627 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:32:49,627 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:32:59,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:32:59,517 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:32:59,518 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:33:09,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:33:09,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:33:09,765 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:33:19,010 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:33:19,616 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:33:19,617 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:33:29,007 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:33:29,617 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:33:29,618 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:33:39,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:33:39,644 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:33:39,645 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:33:49,007 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:33:49,572 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:33:49,573 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:33:59,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:33:59,631 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:33:59,631 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:34:09,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:34:09,471 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:34:09,472 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:34:19,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:34:19,542 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:34:19,543 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:34:29,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:34:29,684 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:34:29,685 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:34:39,003 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:34:39,615 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:34:39,616 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:34:49,003 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:34:49,598 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:34:49,599 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:34:59,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:34:59,731 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:34:59,732 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:35:09,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:35:09,745 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:35:09,746 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:35:19,009 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:35:19,594 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:35:19,595 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:35:29,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:35:29,696 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:35:29,697 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:35:39,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:35:39,651 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:35:39,652 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:35:49,002 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:35:49,603 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:35:49,604 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:35:59,007 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:35:59,598 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:35:59,599 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:36:09,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:36:09,696 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:36:09,696 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:36:19,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:36:19,653 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:36:19,654 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:36:29,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:36:29,560 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:36:29,560 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:36:39,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:36:39,570 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:36:39,572 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:36:49,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:36:49,558 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:36:49,558 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:36:51,496 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(24)-127.0.0.1] Application shutdown requested.
+2022-03-27 22:36:51,499 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(24)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-03-27 22:36:51,506 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [RMI TCP Connection(24)-127.0.0.1] Shutting down Quartz Scheduler
+2022-03-27 22:36:51,506 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(24)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-03-27 22:36:51,506 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(24)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-03-27 22:36:51,507 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(24)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-03-27 22:36:51,511 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(24)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 22:36:51,515 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(24)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2022-03-27 22:36:51,525 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(24)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2022-03-27 22:46:14,711 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FtpApplication using Java 1.8.0_211 on GABRIELE-PC with PID 3900 (C:\Workspaces\FtpTunnelWebBatch\target\classes started by Gabriele in C:\Workspaces\FtpTunnelWebBatch)
+2022-03-27 22:46:14,713 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 22:46:14,804 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 22:46:14,805 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 22:46:15,747 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 22:46:15,987 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 228 ms. Found 3 JPA repository interfaces.
+2022-03-27 22:46:16,816 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 22:46:16,896 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-03-27 22:46:17,124 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 22:46:17,268 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 22:46:17,408 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 22:46:17,455 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-27 22:46:18,356 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 22:46:18,371 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 22:46:19,436 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2022-03-27 22:46:19,771 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2022-03-27 22:46:19,788 INFO org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-03-27 22:46:19,788 INFO org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2022-03-27 22:46:19,789 INFO org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2022-03-27 22:46:19,790 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-03-27 22:46:19,790 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-03-27 22:46:19,791 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2022-03-27 22:46:19,791 INFO org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1f4c53a9
+2022-03-27 22:46:20,639 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 9000
+2022-03-27 22:46:20,832 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2022-03-27 22:46:20,833 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-03-27 22:46:20,841 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:46:20,844 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FtpApplication in 6.724 seconds (JVM running for 8.131)
+2022-03-27 22:46:22,087 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:46:22,088 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:46:30,855 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:46:31,450 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:46:31,451 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:46:40,843 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:46:41,439 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:46:41,440 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:46:50,856 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:46:51,511 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:46:51,511 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:47:00,852 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:47:01,512 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:47:01,513 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:47:10,854 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:47:11,683 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:47:11,685 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:47:20,848 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:47:21,520 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:47:21,521 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:47:30,855 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:47:31,580 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:47:31,581 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:47:40,848 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:47:41,505 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:47:41,505 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:47:50,853 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:47:51,554 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:47:51,555 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:48:00,851 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:48:02,460 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:48:02,462 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:48:10,841 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:48:11,512 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:48:11,514 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:48:20,847 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:48:21,531 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:48:21,532 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:48:30,855 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:48:31,435 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:48:31,435 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:48:40,842 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:48:41,484 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:48:41,484 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:48:50,845 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:48:51,579 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:48:51,581 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:49:00,851 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:49:01,371 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:49:01,371 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:49:10,844 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:49:11,503 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:49:11,504 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:49:20,851 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:49:21,452 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:49:21,452 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:49:30,842 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:49:31,411 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:49:31,412 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:49:40,845 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:49:41,488 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:49:41,489 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:49:50,843 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:49:51,465 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:49:51,465 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:50:00,845 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:50:01,579 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:50:01,580 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:50:10,846 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:50:11,439 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:50:11,439 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:50:20,850 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:50:21,643 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] Move sent files from local path to a trash path 
+2022-03-27 22:50:21,657 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] File Moved
+2022-03-27 22:50:21,659 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:50:21,659 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:50:30,846 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:50:31,424 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:50:31,425 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:50:40,850 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:50:41,517 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:50:41,518 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:50:50,850 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:50:51,477 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:50:51,478 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:51:00,855 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:51:01,516 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:51:01,516 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:51:10,847 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:51:12,946 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:51:12,947 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:51:20,843 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:51:21,460 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:51:21,460 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:51:30,850 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:51:31,532 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:51:31,532 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:51:40,844 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 22:51:41,482 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 22:51:41,482 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 22:51:48,737 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(9)-127.0.0.1] Application shutdown requested.
+2022-03-27 22:51:48,744 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(9)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-03-27 22:51:48,752 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [RMI TCP Connection(9)-127.0.0.1] Shutting down Quartz Scheduler
+2022-03-27 22:51:48,753 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(9)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-03-27 22:51:48,753 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(9)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-03-27 22:51:48,754 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(9)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-03-27 22:51:48,759 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(9)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 22:51:48,762 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(9)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2022-03-27 22:51:48,770 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(9)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2022-03-27 23:05:52,921 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FtpApplication using Java 1.8.0_211 on GABRIELE-PC with PID 16768 (C:\Workspaces\FtpTunnelWebBatch\target\classes started by Gabriele in C:\Workspaces\FtpTunnelWebBatch)
+2022-03-27 23:05:52,923 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 23:05:53,011 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 23:05:53,011 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 23:05:53,977 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 23:05:54,282 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 291 ms. Found 3 JPA repository interfaces.
+2022-03-27 23:05:55,157 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 23:05:55,231 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-03-27 23:05:55,448 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 23:05:55,595 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 23:05:55,733 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 23:05:55,781 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-27 23:05:56,676 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 23:05:56,688 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 23:05:57,760 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2022-03-27 23:05:58,100 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2022-03-27 23:05:58,120 INFO org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-03-27 23:05:58,120 INFO org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2022-03-27 23:05:58,121 INFO org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2022-03-27 23:05:58,122 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-03-27 23:05:58,123 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-03-27 23:05:58,123 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2022-03-27 23:05:58,123 INFO org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@618418b5
+2022-03-27 23:05:58,977 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 9000
+2022-03-27 23:05:59,167 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2022-03-27 23:05:59,167 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-03-27 23:05:59,175 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:05:59,179 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FtpApplication in 6.854 seconds (JVM running for 8.284)
+2022-03-27 23:06:00,275 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:06:00,276 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:06:09,179 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:06:09,795 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:06:09,797 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:06:19,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:06:19,744 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:06:19,744 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:06:29,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:06:29,985 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] Move sent files from local path to a trash path 
+2022-03-27 23:06:29,992 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] File Moved
+2022-03-27 23:06:29,993 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:06:29,993 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:06:39,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:06:39,728 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:06:39,729 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:06:49,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:06:49,989 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:06:49,989 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:06:59,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:06:59,951 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:06:59,951 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:07:09,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:07:09,831 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:07:09,833 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:07:19,179 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:07:19,904 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:07:19,905 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:07:29,177 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:07:29,838 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:07:29,839 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:07:39,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:07:39,806 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:07:39,807 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:07:49,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:07:49,880 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:07:49,881 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:07:59,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:07:59,833 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:07:59,834 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:08:09,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:08:11,334 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:08:11,336 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:08:19,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:08:19,923 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:08:19,924 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:08:29,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:08:29,988 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:08:29,989 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:08:39,175 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:08:39,848 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:08:39,849 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:08:49,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:08:49,817 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:08:49,817 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:08:59,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:08:59,694 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:08:59,695 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:09:09,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:09:09,822 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:09:09,823 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:09:19,186 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:09:19,844 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:09:19,845 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:09:29,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:09:29,880 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:09:29,880 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:09:39,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:09:39,820 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:09:39,821 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:09:49,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:09:49,888 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:09:49,889 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:09:59,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:09:59,937 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:09:59,938 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:10:09,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:10:09,761 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:10:09,763 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:10:19,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:10:19,814 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:10:19,814 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:10:29,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:10:29,755 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:10:29,755 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:10:39,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:10:39,897 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:10:39,898 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:10:49,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:10:49,796 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:10:49,797 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:10:59,179 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:10:59,880 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:10:59,880 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:11:09,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:11:09,754 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:11:09,755 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:11:19,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:11:19,802 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:11:19,803 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:11:29,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:11:29,758 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:11:29,760 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:11:39,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:11:39,766 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:11:39,766 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:11:49,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:11:49,798 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:11:49,798 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:11:59,188 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:11:59,830 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:11:59,830 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:12:09,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:12:09,915 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:12:09,916 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:12:19,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:12:19,922 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:12:19,923 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:12:29,177 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:12:29,675 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:12:29,676 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:12:39,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:12:39,874 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:12:39,875 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:12:49,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:12:49,895 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:12:49,895 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:12:59,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:12:59,728 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:12:59,729 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:13:09,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:13:09,835 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:13:09,836 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:13:19,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:13:19,762 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:13:19,763 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:13:29,188 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:13:29,748 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:13:29,749 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:13:39,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:13:39,892 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:13:39,892 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:13:49,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:13:49,892 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:13:49,893 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:13:59,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:13:59,889 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:13:59,889 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:14:09,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:14:09,900 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:14:09,901 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:14:19,186 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:14:19,857 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:14:19,858 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:14:29,188 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:14:29,959 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:14:29,960 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:14:39,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:14:39,840 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:14:39,841 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:14:49,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:14:49,969 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:14:49,970 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:14:59,177 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:14:59,710 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:14:59,710 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:15:09,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:15:09,875 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:15:09,876 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:15:19,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:15:19,913 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:15:19,914 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:15:29,177 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:15:29,876 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:15:29,877 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:15:39,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:15:39,812 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:15:39,813 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:15:49,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:15:49,811 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:15:49,812 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:15:59,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:15:59,849 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:15:59,850 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:16:09,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:16:10,018 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] Move sent files from local path to a trash path 
+2022-03-27 23:16:10,024 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] File Moved
+2022-03-27 23:16:10,025 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:16:10,026 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:16:19,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:16:19,931 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] Move sent files from local path to a trash path 
+2022-03-27 23:16:19,937 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] File Moved
+2022-03-27 23:16:19,938 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:16:19,938 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:16:29,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:16:29,904 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:16:29,905 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:16:39,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:16:39,870 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:16:39,871 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:16:49,177 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:16:49,882 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:16:49,883 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:16:59,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:16:59,836 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:16:59,836 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:17:09,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:17:09,748 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:17:09,749 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:17:19,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:17:19,840 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:17:19,840 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:17:29,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:17:29,786 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:17:29,786 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:17:39,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:17:39,842 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:17:39,843 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:17:49,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:17:49,875 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:17:49,876 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:17:59,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:17:59,857 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:17:59,857 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:18:09,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:18:09,906 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:18:09,907 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:18:19,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:18:19,834 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:18:19,834 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:18:29,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:18:29,762 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:18:29,762 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:18:39,179 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:18:39,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:18:39,765 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:18:49,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:18:51,282 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] Move sent files from local path to a trash path 
+2022-03-27 23:18:51,283 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] File Moved
+2022-03-27 23:18:51,284 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:18:51,284 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:18:59,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:18:59,797 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:18:59,798 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:19:09,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:19:09,994 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:19:09,995 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:19:19,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:19:19,837 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:19:19,838 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:19:29,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:19:29,937 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:19:29,938 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:19:39,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:19:39,756 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:19:39,756 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:19:49,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:19:49,866 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:19:49,867 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:19:59,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:19:59,881 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:19:59,881 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:20:09,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:20:09,824 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:20:09,825 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:20:19,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:20:19,715 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:20:19,716 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:20:29,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:20:29,836 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:20:29,837 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:20:39,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:20:39,801 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:20:39,802 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:20:49,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:20:49,781 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:20:49,781 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:20:59,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:20:59,866 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:20:59,866 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:21:09,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:21:09,834 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:21:09,835 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:21:19,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:21:19,753 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:21:19,753 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:21:29,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:21:29,812 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:21:29,813 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:21:39,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:21:39,792 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:21:39,792 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:21:49,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:21:49,914 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:21:49,915 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:21:59,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:21:59,880 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:21:59,880 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:22:09,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:22:09,817 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:22:09,817 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:22:19,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:22:19,863 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:22:19,863 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:22:29,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:22:29,745 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:22:29,746 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:22:39,175 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:22:39,908 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:22:39,909 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:22:49,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:22:49,766 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:22:49,767 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:22:59,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:22:59,835 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:22:59,836 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:23:09,186 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:23:09,903 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:23:09,905 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:23:19,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:23:19,774 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:23:19,774 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:23:29,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:23:29,907 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:23:29,908 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:23:39,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:23:39,826 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:23:39,826 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:23:49,179 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:23:49,728 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:23:49,729 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:23:59,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:23:59,847 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:23:59,847 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:24:09,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:24:09,915 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:24:09,916 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:24:19,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:24:19,850 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:24:19,850 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:24:29,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:24:29,814 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:24:29,815 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:24:39,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:24:39,928 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:24:39,929 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:24:49,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:24:49,810 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:24:49,811 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:24:59,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:24:59,847 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:24:59,847 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:25:09,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:25:09,807 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:25:09,809 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:25:19,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:25:19,828 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:25:19,829 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:25:29,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:25:29,811 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:25:29,812 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:25:39,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:25:39,969 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:25:39,970 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:25:49,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:25:49,793 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:25:49,793 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:25:59,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:25:59,947 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:25:59,948 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:26:09,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:26:09,727 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:26:09,728 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:26:19,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:26:19,843 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:26:19,844 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:26:29,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:26:29,877 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:26:29,878 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:26:39,177 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:26:39,774 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:26:39,776 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:26:49,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:26:49,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:26:49,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:26:59,189 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:26:59,733 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:26:59,733 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:27:09,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:27:09,812 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:27:09,812 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:27:19,177 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:27:19,822 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:27:19,822 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:27:29,178 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:27:29,776 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:27:29,777 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:27:39,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:27:39,779 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:27:39,780 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:27:49,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:27:49,772 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:27:49,773 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:27:59,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:27:59,718 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:27:59,719 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:28:09,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:28:09,822 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:28:09,823 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:28:19,180 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:28:20,785 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:28:20,785 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:28:29,188 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:28:29,891 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:28:29,892 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:28:39,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:28:39,815 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:28:39,815 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:28:49,186 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:28:49,918 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:28:49,918 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:28:59,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:28:59,873 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:28:59,874 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:29:09,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:29:09,742 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:29:09,742 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:29:19,185 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:29:19,747 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:29:19,747 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:29:29,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:29:29,759 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:29:29,759 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:29:39,188 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:29:39,816 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:29:39,816 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:29:49,177 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:29:49,975 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:29:49,976 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:29:59,190 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:29:59,785 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:29:59,785 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:30:09,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:30:09,786 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:30:09,786 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:30:19,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:30:19,798 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:30:19,798 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:30:29,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:30:29,747 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:30:29,749 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:30:39,192 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:30:39,782 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:30:39,782 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:30:49,188 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:30:49,875 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:30:49,876 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:30:59,188 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:30:59,831 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:30:59,831 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:31:09,188 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:31:09,969 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:31:09,970 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:31:19,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:31:19,799 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:31:19,799 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:31:29,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:31:29,746 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:31:29,746 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:31:39,191 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:31:39,807 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:31:39,807 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:31:49,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:31:49,854 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:31:49,855 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:31:59,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:31:59,773 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:31:59,773 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:32:09,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:32:09,729 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:32:09,730 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:32:19,179 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:32:19,815 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:32:19,816 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:32:29,184 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:32:29,765 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:32:29,767 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:32:39,182 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:32:39,730 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:32:39,730 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:32:49,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:32:49,841 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:32:49,842 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:32:59,186 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:32:59,733 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:32:59,734 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:33:09,183 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:33:09,869 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:33:09,869 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:33:19,181 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:33:19,911 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:33:19,911 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:33:29,176 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:33:29,816 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:33:29,817 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:33:39,175 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:33:39,871 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:33:39,871 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:38:06,130 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FtpApplication using Java 1.8.0_211 on GABRIELE-PC with PID 20300 (C:\Workspaces\FtpTunnelWebBatch\target\classes started by Gabriele in C:\Workspaces\FtpTunnelWebBatch)
+2022-03-27 23:38:06,132 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 23:38:06,224 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 23:38:06,224 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 23:38:07,194 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 23:38:07,428 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 222 ms. Found 3 JPA repository interfaces.
+2022-03-27 23:38:08,272 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 23:38:08,354 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-03-27 23:38:08,581 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 23:38:08,738 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 23:38:08,884 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 23:38:08,935 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-27 23:38:09,870 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 23:38:09,883 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 23:38:10,968 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-27 23:38:11,312 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2022-03-27 23:38:11,331 INFO org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-03-27 23:38:11,332 INFO org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2022-03-27 23:38:11,333 INFO org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2022-03-27 23:38:11,335 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-03-27 23:38:11,335 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-03-27 23:38:11,335 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2022-03-27 23:38:11,336 INFO org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6e3f598b
+2022-03-27 23:38:12,213 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 9000
+2022-03-27 23:38:12,410 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2022-03-27 23:38:12,410 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-03-27 23:38:12,419 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:38:12,422 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FtpApplication in 6.893 seconds (JVM running for 8.318)
+2022-03-27 23:38:13,607 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:38:13,607 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:38:22,424 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:38:24,462 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:38:24,463 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:38:32,433 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:38:33,103 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:38:33,104 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:38:42,424 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:38:43,139 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:38:43,140 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:38:52,431 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:38:53,615 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:38:53,616 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:39:02,420 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:39:03,121 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:39:03,122 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:39:12,419 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:39:13,028 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:39:13,029 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:39:22,431 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:39:23,086 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:39:23,087 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:39:32,419 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:39:33,051 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:39:33,051 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:39:42,422 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:39:43,047 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:39:43,049 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:39:52,419 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:39:53,069 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:39:53,070 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:40:02,433 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:40:03,146 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:40:03,148 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:40:12,430 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:40:12,989 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:40:12,989 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:40:22,431 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:40:22,997 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:40:22,997 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:40:32,429 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:40:33,099 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:40:33,100 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:40:42,432 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:40:43,025 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:40:43,027 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:40:52,421 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:40:53,031 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:40:53,031 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:41:02,432 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:41:03,146 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:41:03,147 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:41:12,433 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:41:13,071 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:41:13,072 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:41:22,424 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:41:23,033 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:41:23,033 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:41:32,432 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:41:33,051 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:41:33,052 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:41:42,425 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:41:42,984 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:41:42,984 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:41:52,428 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:41:52,959 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:41:52,959 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:42:02,433 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:42:03,119 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:42:03,120 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:42:12,421 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:42:13,016 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:42:13,017 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:42:22,423 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:42:23,034 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:42:23,035 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:42:32,428 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:42:33,053 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:42:33,053 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:42:42,420 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:42:43,186 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:42:43,187 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:42:52,428 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:42:53,084 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:42:53,084 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:43:02,434 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:43:03,132 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:43:03,133 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:43:12,431 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:43:13,104 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:43:13,105 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:43:22,422 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:43:23,013 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:43:23,014 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:43:32,429 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:43:33,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:43:33,006 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:43:42,426 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:43:42,985 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:43:42,987 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:43:52,431 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:43:53,098 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:43:53,099 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:44:02,428 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:44:03,016 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:44:03,017 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:44:12,419 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:44:13,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:44:13,012 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:44:22,434 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:44:23,070 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:44:23,071 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:44:32,421 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:44:33,074 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:44:33,075 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:44:42,426 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:44:43,115 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:44:43,116 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:44:52,429 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:44:53,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:44:53,006 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:45:02,430 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:45:02,961 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:45:02,962 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:45:12,433 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:45:12,989 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:45:12,989 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:45:22,429 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:45:23,033 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:45:23,034 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:45:32,428 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:45:33,008 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:45:33,009 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:45:42,427 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:45:42,898 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:45:42,899 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:45:52,426 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:45:53,004 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:45:53,005 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:46:02,420 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:46:02,920 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:46:02,921 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:46:12,421 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:46:12,941 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:46:12,941 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:46:22,423 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:46:22,940 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:46:22,940 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:46:32,432 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:46:33,092 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:46:33,092 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:46:42,421 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:46:43,080 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:46:43,080 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:46:52,432 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:46:53,120 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:46:53,121 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:47:02,427 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:47:03,057 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:47:03,058 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:47:12,430 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:47:13,038 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:47:13,038 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:47:22,427 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:47:23,146 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:47:23,146 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:47:32,430 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:47:33,140 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:47:33,141 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:47:42,426 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:47:42,943 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:47:42,943 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:47:52,429 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:47:53,070 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:47:53,071 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:48:02,429 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:48:03,037 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:48:03,037 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:48:12,424 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:48:13,087 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:48:13,087 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:48:22,422 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:48:22,924 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:48:22,925 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:48:32,432 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:48:32,977 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:48:32,977 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:48:42,421 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:48:43,063 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:48:43,064 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:48:52,430 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:48:53,073 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:48:53,074 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:49:47,188 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FtpApplication using Java 1.8.0_211 on GABRIELE-PC with PID 20780 (C:\Workspaces\FtpTunnelWebBatch\target\classes started by Gabriele in C:\Workspaces\FtpTunnelWebBatch)
+2022-03-27 23:49:47,190 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 23:49:47,276 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 23:49:47,277 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 23:49:48,258 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 23:49:48,489 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 218 ms. Found 3 JPA repository interfaces.
+2022-03-27 23:49:49,350 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 23:49:49,425 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-03-27 23:49:49,640 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 23:49:49,786 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 23:49:49,926 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 23:49:49,974 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-27 23:49:50,871 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 23:49:50,883 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 23:49:51,929 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-27 23:49:52,263 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2022-03-27 23:49:52,282 INFO org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-03-27 23:49:52,283 INFO org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2022-03-27 23:49:52,284 INFO org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2022-03-27 23:49:52,285 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-03-27 23:49:52,286 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-03-27 23:49:52,286 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2022-03-27 23:49:52,286 INFO org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6a2630e
+2022-03-27 23:49:53,133 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 9000
+2022-03-27 23:49:53,321 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2022-03-27 23:49:53,321 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-03-27 23:49:53,329 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:49:53,332 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FtpApplication in 6.734 seconds (JVM running for 8.131)
+2022-03-27 23:49:54,492 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:49:54,492 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:50:03,331 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:50:03,961 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:50:03,962 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:50:13,335 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:50:13,981 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:50:13,981 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:50:23,330 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:50:24,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:50:24,000 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:50:33,338 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:50:34,025 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:50:34,026 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:50:43,342 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:50:43,904 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:50:43,905 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:50:53,340 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:50:54,061 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:50:54,061 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:51:03,341 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:51:04,065 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:51:04,067 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:51:13,330 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:51:14,038 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:51:14,039 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:51:23,330 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:51:23,926 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:51:23,927 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:51:33,343 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:51:34,051 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:51:34,051 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:51:43,332 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:51:43,852 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:51:43,853 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:51:53,340 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:51:54,159 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:51:54,160 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:52:03,329 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:52:04,110 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:52:04,112 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:52:13,333 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:52:14,028 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:52:14,029 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:52:23,336 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:52:24,100 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:52:24,102 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:52:33,341 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:52:34,059 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:52:34,060 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:52:43,333 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:52:44,055 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:52:44,056 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:52:53,340 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:52:54,099 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:52:54,100 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:53:03,337 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:53:04,056 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:53:04,056 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:53:13,342 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:53:14,109 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:53:14,110 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:53:23,334 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:53:24,083 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:53:24,084 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:53:33,329 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:53:34,048 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:53:34,048 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:53:43,340 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:53:44,043 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:53:44,044 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:53:53,343 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:53:53,982 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:53:53,983 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:54:03,338 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:54:03,920 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:54:03,921 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:54:13,332 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:54:13,907 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:54:13,908 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:54:23,343 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:54:23,863 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:54:23,864 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:54:33,331 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:54:34,064 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:54:34,065 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:54:43,330 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:54:43,990 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:54:43,991 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:54:53,331 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:54:53,870 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:54:53,870 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:55:03,334 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:55:03,964 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:55:03,966 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:55:07,134 INFO org.quartz.core.QuartzScheduler [Thread-6] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-03-27 23:55:07,142 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [Thread-6] Shutting down Quartz Scheduler
+2022-03-27 23:55:07,143 INFO org.quartz.core.QuartzScheduler [Thread-6] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-03-27 23:55:07,143 INFO org.quartz.core.QuartzScheduler [Thread-6] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-03-27 23:55:07,144 INFO org.quartz.core.QuartzScheduler [Thread-6] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-03-27 23:55:07,148 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-6] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 23:55:07,153 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown initiated...
+2022-03-27 23:55:07,162 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown completed.
+2022-03-27 23:55:45,483 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FtpApplication using Java 1.8.0_211 on GABRIELE-PC with PID 19612 (C:\Workspaces\FtpTunnelWebBatch\target\classes started by Gabriele in C:\Workspaces\FtpTunnelWebBatch)
+2022-03-27 23:55:45,485 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-03-27 23:55:45,569 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 23:55:45,569 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 23:55:46,534 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 23:55:46,766 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 220 ms. Found 3 JPA repository interfaces.
+2022-03-27 23:55:47,604 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 23:55:47,679 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-03-27 23:55:47,891 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 23:55:48,038 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-27 23:55:48,179 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-27 23:55:48,228 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-27 23:55:49,127 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 23:55:49,139 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 23:55:50,243 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-27 23:55:50,601 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2022-03-27 23:55:50,621 INFO org.quartz.core.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-03-27 23:55:50,622 INFO org.quartz.core.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2022-03-27 23:55:50,623 INFO org.quartz.simpl.RAMJobStore [restartedMain] RAMJobStore initialized.
+2022-03-27 23:55:50,624 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2022-03-27 23:55:50,624 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-03-27 23:55:50,624 INFO org.quartz.impl.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2022-03-27 23:55:50,624 INFO org.quartz.core.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6460313e
+2022-03-27 23:55:51,551 INFO org.springframework.boot.web.embedded.netty.NettyWebServer [restartedMain] Netty started on port 9000
+2022-03-27 23:55:51,747 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2022-03-27 23:55:51,748 INFO org.quartz.core.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-03-27 23:55:51,756 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:55:51,759 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FtpApplication in 6.871 seconds (JVM running for 8.266)
+2022-03-27 23:55:52,780 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:55:52,780 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:56:01,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:56:02,388 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:56:02,389 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:56:11,759 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:56:12,371 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:56:12,372 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:56:21,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:56:22,564 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:56:22,566 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:56:31,769 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:56:32,573 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:56:32,575 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:56:41,766 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:56:42,526 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:56:42,527 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:56:51,759 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:56:52,540 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:56:52,541 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:57:01,760 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:57:02,310 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:57:02,311 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:57:11,770 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:57:12,350 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:57:12,350 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:57:21,757 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:57:22,368 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:57:22,369 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:57:31,765 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:57:32,518 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] Move sent files from local path to a trash path 
+2022-03-27 23:57:32,524 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] File Moved
+2022-03-27 23:57:32,525 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:57:32,526 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:57:41,768 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:57:42,452 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:57:42,453 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:57:51,765 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:57:52,261 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:57:52,262 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:58:01,756 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:58:02,413 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:58:02,415 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:58:11,758 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:58:12,353 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:58:12,354 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:58:21,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:58:22,462 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:58:22,463 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:58:31,756 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:58:32,504 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:58:32,505 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:58:41,769 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:58:42,504 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:58:42,506 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:58:51,769 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:58:52,349 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:58:52,350 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:59:01,763 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:59:02,515 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:59:02,516 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:59:11,768 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:59:12,299 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:59:12,299 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:59:21,772 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:59:22,525 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:59:22,526 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:59:31,763 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:59:32,244 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:59:32,245 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:59:41,760 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:59:42,432 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:59:42,433 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************
+2022-03-27 23:59:51,764 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********Start send file *************
+2022-03-27 23:59:52,516 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] No file prenset
+2022-03-27 23:59:52,517 INFO net.smart.rfid.tunnel.services.FileService [scheduling-1] *********FINE*************

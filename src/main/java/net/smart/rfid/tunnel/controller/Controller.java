@@ -3,11 +3,13 @@ package net.smart.rfid.tunnel.controller;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,8 +43,8 @@ public class Controller {
 		}
 	}
 
-	@PostMapping("/startOfShipment")
-	public String sendDataToClient(@RequestParam String shipCode) throws Exception {
+	@GetMapping("/startOfShipment")
+	public String startOfShipment(@RequestParam String shipCode) throws Exception {
 		try {
 			DataService.currentShipCode = shipCode;
 			Long maxShip = dataService.getMaxShipSeqByShipCode(shipCode);
@@ -56,19 +58,20 @@ public class Controller {
 		}
 	}
 
-	@PostMapping("/stopOfShipment")
+	@GetMapping("/stopOfShipment")
 	public String stopOfShipment(@RequestParam String shipCode) throws Exception {
 		try {
 			DataService.currentShipCode = "";
 			DataService.shipSeq = new Long(0);
 			//
+			String message = "";
 			List<DataClient> listDataClient = dataService.findByShipCodeOrderByShipSeq(shipCode);
 			if (listDataClient.size() > 0) {
 
 				// first create file object for file placed at location
 				// specified by filepath
 				File file = new File(PropertiesUtil.getPathLocal() + "/" + shipCode + ".csv");
-
+				message = file.getName();
 				// create FileWriter object with file as parameter
 				FileWriter outputfile = new FileWriter(file);
 
@@ -89,8 +92,10 @@ public class Controller {
 
 				// closing writer connection
 				writer.close();
+				message = message + " generated";
+				
 			}
-			return "ok";
+			return "OK " + message;
 		} catch (Exception e) {
 			throw e;
 		}
