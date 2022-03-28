@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -18,8 +18,9 @@ import net.smart.rfid.tunnel.db.repository.ReaderStreamRepository.ReaderStreamOn
 @Service
 public class DataService {
 
-	private static final Logger logger = LoggerFactory.getLogger(DataService.class);
-
+	
+	
+	private static final Logger logger = LogManager.getLogger(DataService.class);
 	public static String currentShipCode = "";
 	public static Long shipSeq = new Long(0);
 	

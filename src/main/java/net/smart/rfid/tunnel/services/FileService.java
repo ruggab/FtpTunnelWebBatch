@@ -10,19 +10,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.security.KeyFactory;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PublicKey;
-import java.security.spec.EncodedKeySpec;
-import java.security.spec.X509EncodedKeySpec;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.crypto.Cipher;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -36,11 +31,11 @@ import net.smart.rfid.util.PropertiesUtil;
 @Service
 public class FileService {
 
-	private static final Logger log = LoggerFactory.getLogger(FileService.class);
+	private static final Logger logger = LogManager.getLogger(FileService.class);
 
 	@Scheduled(fixedRateString = "${cronExpression}")
 	public void sendFileWithSftp() {
-		log.info("*********Start send file *************");
+		logger.info("*********Start send file *************");
 		try {
 			String remoteDir = PropertiesUtil.getPathDestination();
 			ChannelSftp channelSftp = setupJsch();
@@ -53,22 +48,22 @@ public class FileService {
 				inputStream.close();
 				//
 				// Sposto file pdf
-				log.info("Move sent files from local path to a trash path ");
+				logger.info("Move sent files from local path to a trash path ");
 				Path sourceDir = Paths.get(file.getPath());
 				Path destDir = Paths.get(PropertiesUtil.getTrashPath()+file.getName());
 				
 				Files.move(sourceDir, destDir, StandardCopyOption.REPLACE_EXISTING);
 
-				log.info("File Moved");
+				logger.info("File Moved");
 			}
 			channelSftp.exit();
 		} catch (FileNotFoundException e) {
-			log.info("No file prenset");
+			logger.info("No file prenset");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		log.info("*********FINE*************");
+		logger.info("*********FINE*************");
 	}
 
 	private ChannelSftp setupJsch() throws JSchException {
