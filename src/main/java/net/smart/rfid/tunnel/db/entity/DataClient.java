@@ -26,6 +26,8 @@ public class DataClient {
 	private Long idTunnel;
 
 	private Long packId;
+	
+	private String nameTunnel;
 
 	private String packageData;
 
@@ -135,5 +137,15 @@ public class DataClient {
 	public void setShipSeq(Long shipSeq) {
 		this.shipSeq = shipSeq;
 	}
+
+	public String getNameTunnel() {
+		return nameTunnel;
+	}
+
+	public void setNameTunnel(String nameTunnel) {
+		this.nameTunnel = nameTunnel;
+	}
+	
+	
 
 }

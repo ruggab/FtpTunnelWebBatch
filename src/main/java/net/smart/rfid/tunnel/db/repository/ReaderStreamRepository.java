@@ -13,12 +13,9 @@ import net.smart.rfid.tunnel.db.entity.ReaderStream;
 public interface ReaderStreamRepository extends JpaRepository<ReaderStream, Long> {
 
 	
-	@Query(value = " select c.id_tunnel as idTunnel, c.pack_id as packId, c.package_data as packageData,"
-			+ "    c.epc, c.tid, c.sku, c.time_stamp as timeStamp "
-			+ " from (SELECT DISTINCT  a.id_tunnel,a.pack_id,a.package_data,a.epc, a.tid,a.sku,a.time_stamp FROM reader_stream a"
-			+ " UNION ALL SELECT DISTINCT  b.id_tunnel, b.pack_id, b.package_data, b.epc, b.tid,  b.sku,  b.time_stamp FROM reader_stream_history b) c"
-			+ " where c.pack_id = ?1 order by pack_id ", nativeQuery = true)
+	@Query(value = " select idtunnel as idTunnel, nametunnel as nameTunnel, packid as packId, packagedata packageData, epc, tid, sku, time_stamp as timeStamp from data_client_list where packid = ?1", nativeQuery = true)
 	List<ReaderStreamOnly> getReaderStreamListByPackId(Long packId);
+	
 	
 	
 	@Query(value = " SELECT ship_seq FROM public.data_client where ship_code = ?1 order by ship_seq desc limit 1 ", nativeQuery = true)
@@ -28,6 +25,8 @@ public interface ReaderStreamRepository extends JpaRepository<ReaderStream, Long
 		Long getIdTunnel();
 
 		Long getPackId();
+		
+		String getNameTunnel();
 
 		String getPackageData();
 

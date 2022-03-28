@@ -40,6 +40,7 @@ public class DataService {
 			dataClient.setEpc(readerStreamOnly.getEpc());
 			dataClient.setIdTunnel(readerStreamOnly.getIdTunnel());
 			dataClient.setPackageData(readerStreamOnly.getPackageData());
+			dataClient.setNameTunnel(readerStreamOnly.getNameTunnel());
 			dataClient.setSku(readerStreamOnly.getSku());
 			dataClient.setTid(readerStreamOnly.getTid());
 			dataClient.setPackId(readerStreamOnly.getPackId());

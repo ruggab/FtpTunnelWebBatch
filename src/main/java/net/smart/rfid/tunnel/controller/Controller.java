@@ -2,7 +2,9 @@ package net.smart.rfid.tunnel.controller;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,30 +72,30 @@ public class Controller {
 
 				// first create file object for file placed at location
 				// specified by filepath
-				File file = new File(PropertiesUtil.getPathLocal() + "/" + shipCode + ".csv");
+				long yourmilliseconds = System.currentTimeMillis();
+				SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");    
+				Date resultdate = new Date(yourmilliseconds);
+				File file = new File(PropertiesUtil.getPathLocal() + "/" + shipCode + "_" + resultdate + ".csv");
 				message = file.getName();
 				// create FileWriter object with file as parameter
 				FileWriter outputfile = new FileWriter(file);
 
-				 // create CSVWriter with ';' as separator
-	            CSVWriter writer = new CSVWriter(outputfile, ';',
-	                                             CSVWriter.NO_QUOTE_CHARACTER,
-	                                             CSVWriter.DEFAULT_ESCAPE_CHARACTER,
-	                                             CSVWriter.DEFAULT_LINE_END);
+				// create CSVWriter with ';' as separator
+				CSVWriter writer = new CSVWriter(outputfile, ';', CSVWriter.NO_QUOTE_CHARACTER, CSVWriter.DEFAULT_ESCAPE_CHARACTER, CSVWriter.DEFAULT_LINE_END);
 				// create a List which contains String array
 				List<String[]> data = new ArrayList<String[]>();
 
-				data.add(new String[] { "IdTunnel", "PackId", "PackageData", "Epc", "Sku", "Tid", "ShipCode", "ShipSeq" });
+				data.add(new String[] { "idTunnel", "NameTunnel", "ShipCode", "ShipSeq", "PackageData", "Tid", "Epc", "Sku", "Timestamp" });
 
 				for (DataClient c : listDataClient) {
-					data.add(new String[] { c.getIdTunnel()+"", c.getPackId()+"", c.getPackageData(), c.getEpc(), c.getSku(), c.getTid(), c.getShipCode(), c.getShipSeq()+""});					
+					data.add(new String[] { c.getIdTunnel() + "", c.getNameTunnel(), c.getShipCode(), c.getShipSeq() + "", c.getPackageData(), c.getTid(), c.getEpc(), c.getSku(), c.getDataForm() });
 				}
 				writer.writeAll(data);
 
 				// closing writer connection
 				writer.close();
 				message = message + " generated";
-				
+
 			}
 			return "OK " + message;
 		} catch (Exception e) {

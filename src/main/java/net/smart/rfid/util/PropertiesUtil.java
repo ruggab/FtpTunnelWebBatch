@@ -15,6 +15,8 @@ public class PropertiesUtil {
 	private static String trashPath;
 	private static String hostIp;
 	private static String hostPort;
+	private static String sshknownHosts;
+	
 
 	public static String getCronExpression() {
 		return cronExpression;
@@ -78,6 +80,14 @@ public class PropertiesUtil {
 
 	public  void setTrashPath(String trashPath) {
 		this.trashPath = trashPath;
+	}
+
+	public static String getSshknownHosts() {
+		return sshknownHosts;
+	}
+
+	public  void setSshknownHosts(String sshknownHosts) {
+		this.sshknownHosts = sshknownHosts;
 	}
 	
 	

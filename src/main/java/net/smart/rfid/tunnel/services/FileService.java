@@ -68,7 +68,7 @@ public class FileService {
 
 	private ChannelSftp setupJsch() throws JSchException {
 		JSch jsch = new JSch();
-		jsch.setKnownHosts("C:\\Users\\Gabriele\\.ssh\\known_hosts");
+		jsch.setKnownHosts(PropertiesUtil.getSshknownHosts()+"/known_hosts");
 		Session jschSession = jsch.getSession(PropertiesUtil.getUser(), PropertiesUtil.getHostIp(), new Integer(PropertiesUtil.getHostPort()));
 		jschSession.setPassword(PropertiesUtil.getPassword());
 		// jschSession.setConfig(null, null);
