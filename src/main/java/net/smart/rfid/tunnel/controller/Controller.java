@@ -85,10 +85,10 @@ public class Controller {
 				// create a List which contains String array
 				List<String[]> data = new ArrayList<String[]>();
 
-				data.add(new String[] { "idTunnel", "NameTunnel", "ShipCode", "ShipSeq", "PackageData", "Tid", "Epc", "Sku", "Timestamp" });
+				data.add(new String[] { "IdTunnel", "PackageData", "Epc", "Sku", "ScanDate" });
 
 				for (DataClient c : listDataClient) {
-					data.add(new String[] { c.getIdTunnel() + "", c.getNameTunnel(), c.getShipCode(), c.getShipSeq() + "", c.getPackageData(), c.getTid(), c.getEpc(), c.getSku(), c.getDataForm() });
+					data.add(new String[] { c.getIdTunnel() + "", c.getPackageData(), c.getEpc(), c.getSku(), c.getDataForm() });
 				}
 				writer.writeAll(data);
 
