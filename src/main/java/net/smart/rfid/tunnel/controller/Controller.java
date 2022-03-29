@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,14 +48,22 @@ public class Controller {
 
 	@GetMapping("/startOfShipment")
 	public String startOfShipment(@RequestParam String shipCode) throws Exception {
+		String message = "";
 		try {
+			if (StringUtils.isEmpty(shipCode)) {
+				message = "ShipCode Mandatory";
+				return message;
+			}
+			//
 			DataService.currentShipCode = shipCode;
 			Long maxShip = dataService.getMaxShipSeqByShipCode(shipCode);
+			dataService.save(shipCode);
 			DataService.shipSeq = new Long(1);
 			if (maxShip != null) {
 				DataService.shipSeq = maxShip;
 			}
-			return "ok";
+			message = "OK";
+			return message;
 		} catch (Exception e) {
 			throw e;
 		}
@@ -63,19 +72,26 @@ public class Controller {
 	@GetMapping("/stopOfShipment")
 	public String stopOfShipment(@RequestParam String shipCode) throws Exception {
 		try {
+			
+			
 			DataService.currentShipCode = "";
 			DataService.shipSeq = new Long(0);
 			//
 			String message = "";
+			if (StringUtils.isEmpty(shipCode)) {
+				message = "ShipCode Mandatory";
+				return message;
+			}
 			List<DataClient> listDataClient = dataService.findByShipCodeOrderByShipSeq(shipCode);
 			if (listDataClient.size() > 0) {
 
 				// first create file object for file placed at location
 				// specified by filepath
 				long yourmilliseconds = System.currentTimeMillis();
-				SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");    
+				SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HH.mm");
 				Date resultdate = new Date(yourmilliseconds);
-				File file = new File(PropertiesUtil.getPathLocal() + "/" + shipCode + "_" + resultdate + ".csv");
+				String dateFormat = sdf.format(resultdate);
+				File file = new File(PropertiesUtil.getPathLocal() + "/" + shipCode + "_" + dateFormat + ".csv");
 				message = file.getName();
 				// create FileWriter object with file as parameter
 				FileWriter outputfile = new FileWriter(file);
@@ -97,6 +113,7 @@ public class Controller {
 				message = message + " generated";
 
 			}
+			dataService.deleteAllShip();
 			return "OK " + message;
 		} catch (Exception e) {
 			throw e;
@@ -112,15 +129,22 @@ public class Controller {
 			throw e;
 		}
 	}
-	
 
 	@PostMapping("/saveDataClient")
 	public String saveDataClient(@RequestParam Long packId) throws Exception {
 		try {
-
 			dataService.findStreamAndSaveDataClientBy(packId);
-
 			return "ok";
+		} catch (Exception e) {
+			throw e;
+		}
+	}
+
+	@GetMapping("/getLastShip")
+	public String getLastShip() throws Exception {
+		try {
+			String last = dataService.getLastShip();
+			return last;
 		} catch (Exception e) {
 			throw e;
 		}
