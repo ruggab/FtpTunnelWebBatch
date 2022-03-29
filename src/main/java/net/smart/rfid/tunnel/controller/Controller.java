@@ -112,5 +112,18 @@ public class Controller {
 			throw e;
 		}
 	}
+	
+
+	@PostMapping("/saveDataClient")
+	public String saveDataClient(@RequestParam Long packId) throws Exception {
+		try {
+
+			dataService.findStreamAndSaveDataClientBy(packId);
+
+			return "ok";
+		} catch (Exception e) {
+			throw e;
+		}
+	}
 
 }

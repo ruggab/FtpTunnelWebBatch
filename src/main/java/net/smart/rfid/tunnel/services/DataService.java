@@ -32,6 +32,7 @@ public class DataService {
 	
 	@Transactional
 	public List<ReaderStreamOnly> findStreamAndSaveDataClientBy(Long packId) throws Exception {
+		logger.info("Start Insert");
 		//
 		List<ReaderStreamOnly> listReaderStream = readerStreamRepository.getReaderStreamListByPackId(packId);
 		
@@ -53,7 +54,9 @@ public class DataService {
 		}
 		//La seq è incrementata ad ogni nuovo package
 		shipSeq = shipSeq + 1;
+		logger.info("End Insert");
 		return listReaderStream;
+		
 	}
 	
 	
