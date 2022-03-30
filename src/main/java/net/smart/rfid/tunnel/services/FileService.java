@@ -106,6 +106,8 @@ public class FileService {
 	}
 
 	private File[] getListFileOfDir(String dir) throws IOException {
+		//AgeFileFilter filter = new AgeFileFilter(threshold);
+		
 		File folder = new File(dir);
 		File[] listOfFiles = folder.listFiles();
 

@@ -17,6 +17,8 @@ public class ShipTable {
     private Long id;
 	
 	private String shipCode;
+	
+	private Long seq;
 
 	public Long getId() {
 		return id;
@@ -32,6 +34,14 @@ public class ShipTable {
 
 	public void setShipCode(String shipCode) {
 		this.shipCode = shipCode;
+	}
+
+	public Long getSeq() {
+		return seq;
+	}
+
+	public void setSeq(Long seq) {
+		this.seq = seq;
 	}
 
 	

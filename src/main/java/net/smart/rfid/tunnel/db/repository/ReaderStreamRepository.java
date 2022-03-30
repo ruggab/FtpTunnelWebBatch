@@ -17,10 +17,6 @@ public interface ReaderStreamRepository extends JpaRepository<ReaderStream, Long
 	List<ReaderStreamOnly> getReaderStreamListByPackId(Long packId);
 	
 	
-	
-	@Query(value = " SELECT ship_seq FROM public.data_client where ship_code = ?1 order by ship_seq desc limit 1 ", nativeQuery = true)
-	Long getMaxShipSeqByShipCode(String shipCode);
-	
 	public static interface ReaderStreamOnly {
 		Long getIdTunnel();
 

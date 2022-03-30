@@ -18,8 +18,10 @@ public class WebSocketToClient {
 			Iterator<WebSocketSession> iterator = MyWebSocketHandler.tunnelUsers.iterator();
 			while (iterator.hasNext()) {
 				WebSocketSession wss = iterator.next();
+				logger.info(wss.getUri().getPath());
 				if (wss.getUri().getPath().contains("shipping")) {
 					synchronized (wss) {
+						logger.info(jsonMessage);
 						wss.sendMessage(new TextMessage(jsonMessage));
 					}
 				}

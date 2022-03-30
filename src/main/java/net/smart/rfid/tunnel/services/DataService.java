@@ -22,8 +22,6 @@ import net.smart.rfid.util.WebSocketToClient;
 public class DataService {
 
 	private static final Logger logger = LogManager.getLogger(DataService.class);
-	public static String currentShipCode = "";
-	public static Long shipSeq = new Long(0);
 
 	@Autowired
 	private ReaderStreamRepository readerStreamRepository;
@@ -39,71 +37,87 @@ public class DataService {
 		logger.info("Start Insert");
 		//
 		List<ReaderStreamOnly> listReaderStream = readerStreamRepository.getReaderStreamListByPackId(packId);
-
-		for (ReaderStreamOnly readerStreamOnly : listReaderStream) {
-			DataClient dataClient = new DataClient();
-			dataClient.setEpc(readerStreamOnly.getEpc());
-			dataClient.setIdTunnel(readerStreamOnly.getIdTunnel());
-			dataClient.setPackageData(readerStreamOnly.getPackageData());
-			dataClient.setNameTunnel(readerStreamOnly.getNameTunnel());
-			dataClient.setSku(readerStreamOnly.getSku());
-			dataClient.setTid(readerStreamOnly.getTid());
-			dataClient.setPackId(readerStreamOnly.getPackId());
-			dataClient.setTimeStamp(readerStreamOnly.getTimeStamp());
-			if (StringUtils.hasText(currentShipCode)) {
-				dataClient.setShipCode(currentShipCode);
-				dataClient.setShipSeq(shipSeq);
+		ShipTable schipTable = shipTableRepository.getLastShip();
+		
+		// schipTable
+		// shipTableRepository.
+		if (schipTable != null && StringUtils.hasText(schipTable.getShipCode())) {
+			Long currentSeq = schipTable.getSeq();
+			currentSeq = currentSeq + 1;
+			schipTable.setSeq(currentSeq);
+			shipTableRepository.save(schipTable);
+			for (ReaderStreamOnly readerStreamOnly : listReaderStream) {
+				DataClient dataClient = new DataClient();
+				dataClient.setEpc(readerStreamOnly.getEpc());
+				dataClient.setIdTunnel(readerStreamOnly.getIdTunnel());
+				dataClient.setPackageData(readerStreamOnly.getPackageData());
+				dataClient.setNameTunnel(readerStreamOnly.getNameTunnel());
+				dataClient.setSku(readerStreamOnly.getSku());
+				dataClient.setTid(readerStreamOnly.getTid());
+				dataClient.setPackId(readerStreamOnly.getPackId());
+				dataClient.setTimeStamp(readerStreamOnly.getTimeStamp());
+				dataClient.setShipCode(schipTable.getShipCode());
+				dataClient.setShipSeq(currentSeq);
 				dataClientRepository.save(dataClient);
-				WebSocketToClient.sendMessageOnPackageReadEvent("Package Shipped: " + readerStreamOnly.getPackageData());
-			} else {
-				WebSocketToClient.sendMessageOnPackageReadEvent("Package NOT Shipped: " + readerStreamOnly.getPackageData());
 			}
-
+			WebSocketToClient.sendMessageOnPackageReadEvent("Package Count: " + currentSeq);
+		} else {
+			WebSocketToClient.sendMessageOnPackageReadEvent("No Schipment Code PackageId: " + packId);
 		}
-		// La seq è incrementata ad ogni nuovo package
-		shipSeq = shipSeq + 1;
+		//
+
+		//
 		logger.info("End Insert");
 		return listReaderStream;
 
 	}
 
 	@Transactional
-	public Long getMaxShipSeqByShipCode(String shipCode) throws Exception {
-		//
-		Long maxShip = readerStreamRepository.getMaxShipSeqByShipCode(shipCode);
-
-		return maxShip;
-	}
-
-	@Transactional
 	public List<DataClient> findByShipCodeOrderByShipSeq(String shipCode) throws Exception {
 		//
-		List<DataClient> listClinetData = dataClientRepository.findByShipCodeOrderByShipSeq(shipCode);
+		List<DataClient> listClientData = dataClientRepository.findByShipCodeOrderByShipSeq(shipCode);
 
-		return listClinetData;
+		return listClientData;
 	}
 
 	@Transactional
-	public ShipTable save(String shipCode) throws Exception {
+	public ShipTable save(String shipCode, Long seq) throws Exception {
 		//
 		ShipTable shipTable = new ShipTable();
 		shipTable.setShipCode(shipCode);
+		shipTable.setSeq(seq);
 		shipTable = shipTableRepository.save(shipTable);
-
+		//
 		return shipTable;
 	}
 
 	@Transactional
 	public String getLastShip() throws Exception {
 		//
-		String last = shipTableRepository.getLastShip();
+		String ret = "";
+		ShipTable last = shipTableRepository.getLastShip();
+		if (last != null) {
+			ret = last.getShipCode();
+		}
 
-		return last;
+		return ret;
+	}
+
+	@Transactional
+	public Long getMaxSeq() throws Exception {
+		//
+		Long ret = 0l;
+		ShipTable last = shipTableRepository.getLastShip();
+		if (last != null) {
+			ret = last.getSeq();
+		}
+		return ret;
 	}
 
 	@Transactional
 	public void deleteAllShip() throws Exception {
 		shipTableRepository.deleteAll();
+		dataClientRepository.deleteAll();
 	}
 
 }
