@@ -53,27 +53,29 @@ public class FileService {
 			List<DataClientSendFile> listDataSend = dataClientSendFileRepository.findByStatus(false);
 			//
 			for (DataClientSendFile dataClientSendFile : listDataSend) {
-				File file = getFileByName(PropertiesUtil.getPathLocal(), dataClientSendFile.getNameFile());
-				//
-				InputStream inputStream = new FileInputStream(file);
-				channelSftp.put(inputStream, remoteDir + file.getName());
-				inputStream.close();
-				//
-				// Sposto file pdf
-				logger.info("Move sent files from local path to a trash path ");
-				Path sourceDir = Paths.get(file.getPath());
-				Path destDir = Paths.get(PropertiesUtil.getTrashPath() + file.getName());
-				//
-				Files.move(sourceDir, destDir, StandardCopyOption.REPLACE_EXISTING);
-				//
-				dataClientSendFile.setStatus(true);
-				dataClientSendFileRepository.save(dataClientSendFile);
-				//
-				logger.info("File Moved");
+				try {
+					File file = getFileByName(PropertiesUtil.getPathLocal(), dataClientSendFile.getNameFile());
+					//
+					InputStream inputStream = new FileInputStream(file);
+					channelSftp.put(inputStream, remoteDir + file.getName());
+					inputStream.close();
+					//
+					// Sposto file pdf
+					logger.info("Move sent files from local path to a trash path ");
+					Path sourceDir = Paths.get(file.getPath());
+					Path destDir = Paths.get(PropertiesUtil.getTrashPath() + file.getName());
+					//
+					Files.move(sourceDir, destDir, StandardCopyOption.REPLACE_EXISTING);
+					//
+					dataClientSendFile.setStatus(true);
+					dataClientSendFileRepository.save(dataClientSendFile);
+					//
+					logger.info("File Moved");
+				} catch (FileNotFoundException e) {
+					logger.info("No file prenset");
+				}
 			}
 			channelSftp.exit();
-		} catch (FileNotFoundException e) {
-			logger.info("No file prenset");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
