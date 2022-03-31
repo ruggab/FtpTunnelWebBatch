@@ -13,11 +13,14 @@ import java.nio.file.StandardCopyOption;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PublicKey;
+import java.util.List;
 
 import javax.crypto.Cipher;
+import javax.transaction.Transactional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +29,8 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
+import net.smart.rfid.tunnel.db.entity.DataClientSendFile;
+import net.smart.rfid.tunnel.db.repository.DataClientSendFileRepository;
 import net.smart.rfid.util.PropertiesUtil;
 
 @Service
@@ -33,16 +38,23 @@ public class FileService {
 
 	private static final Logger logger = LogManager.getLogger(FileService.class);
 
+	@Autowired
+	private DataClientSendFileRepository dataClientSendFileRepository;
+
 	@Scheduled(fixedRateString = "${cronExpression}")
+	@Transactional
 	public void sendFileWithSftp() {
 		logger.info("*********Start send file *************");
 		try {
 			String remoteDir = PropertiesUtil.getPathDestination();
 			ChannelSftp channelSftp = setupJsch();
 			channelSftp.connect();
-
-			File[] listFile = getListFileOfDir(PropertiesUtil.getPathLocal());
-			for (File file : listFile) {
+			//
+			List<DataClientSendFile> listDataSend = dataClientSendFileRepository.findByStatus(false);
+			//
+			for (DataClientSendFile dataClientSendFile : listDataSend) {
+				File file = getFileByName(PropertiesUtil.getPathLocal(), dataClientSendFile.getNameFile());
+				//
 				InputStream inputStream = new FileInputStream(file);
 				channelSftp.put(inputStream, remoteDir + file.getName());
 				inputStream.close();
@@ -50,10 +62,13 @@ public class FileService {
 				// Sposto file pdf
 				logger.info("Move sent files from local path to a trash path ");
 				Path sourceDir = Paths.get(file.getPath());
-				Path destDir = Paths.get(PropertiesUtil.getTrashPath()+file.getName());
-				
+				Path destDir = Paths.get(PropertiesUtil.getTrashPath() + file.getName());
+				//
 				Files.move(sourceDir, destDir, StandardCopyOption.REPLACE_EXISTING);
-
+				//
+				dataClientSendFile.setStatus(true);
+				dataClientSendFileRepository.save(dataClientSendFile);
+				//
 				logger.info("File Moved");
 			}
 			channelSftp.exit();
@@ -68,7 +83,7 @@ public class FileService {
 
 	private ChannelSftp setupJsch() throws JSchException {
 		JSch jsch = new JSch();
-		jsch.setKnownHosts(PropertiesUtil.getSshknownHosts()+"/known_hosts");
+		jsch.setKnownHosts(PropertiesUtil.getSshknownHosts() + "/known_hosts");
 		Session jschSession = jsch.getSession(PropertiesUtil.getUser(), PropertiesUtil.getHostIp(), new Integer(PropertiesUtil.getHostPort()));
 		jschSession.setPassword(PropertiesUtil.getPassword());
 		// jschSession.setConfig(null, null);
@@ -106,12 +121,17 @@ public class FileService {
 	}
 
 	private File[] getListFileOfDir(String dir) throws IOException {
-		//AgeFileFilter filter = new AgeFileFilter(threshold);
-		
+		// AgeFileFilter filter = new AgeFileFilter(threshold);
+
 		File folder = new File(dir);
 		File[] listOfFiles = folder.listFiles();
 
 		return listOfFiles;
+	}
+
+	private File getFileByName(String dir, String filename) throws IOException {
+		File f = new File(dir + "/" + filename);
+		return f;
 	}
 
 }

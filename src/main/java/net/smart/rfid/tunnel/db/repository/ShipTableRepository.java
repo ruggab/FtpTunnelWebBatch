@@ -12,8 +12,9 @@ public interface ShipTableRepository extends JpaSpecificationExecutor<ShipTable>
 
 	
 	
-	@Query(value = " SELECT * FROM ship_table", nativeQuery = true)
-	ShipTable getLastShip();
+	@Query(value = " SELECT * FROM ship_table order by seq desc limit 1", nativeQuery = true)
+	public ShipTable getLastShip();
+	
 
 	
 }

@@ -24,6 +24,8 @@ public class DataClient {
 	private Long id;
 
 	private Long idTunnel;
+	
+	private Long idShipTable;
 
 	private Long packId;
 	
@@ -144,6 +146,14 @@ public class DataClient {
 
 	public void setNameTunnel(String nameTunnel) {
 		this.nameTunnel = nameTunnel;
+	}
+
+	public Long getIdShipTable() {
+		return idShipTable;
+	}
+
+	public void setIdShipTable(Long idShipTable) {
+		this.idShipTable = idShipTable;
 	}
 	
 	

@@ -33,7 +33,7 @@ public class DataService {
 	private DataClientRepository dataClientRepository;
 
 	@Transactional
-	public List<ReaderStreamOnly> findStreamAndSaveDataClientBy(Long packId) throws Exception {
+	public List<ReaderStreamOnly> findStreamAndSaveDataClientBy(Long packId, String packageData) throws Exception {
 		logger.info("Start Insert");
 		//
 		List<ReaderStreamOnly> listReaderStream = readerStreamRepository.getReaderStreamListByPackId(packId);
@@ -58,11 +58,12 @@ public class DataService {
 				dataClient.setTimeStamp(readerStreamOnly.getTimeStamp());
 				dataClient.setShipCode(schipTable.getShipCode());
 				dataClient.setShipSeq(currentSeq);
+				dataClient.setIdShipTable(schipTable.getId());
 				dataClientRepository.save(dataClient);
 			}
 			WebSocketToClient.sendMessageOnPackageReadEvent("Package Count: " + currentSeq);
 		} else {
-			WebSocketToClient.sendMessageOnPackageReadEvent("No Schipment Code PackageId: " + packId);
+			WebSocketToClient.sendMessageOnPackageReadEvent("No Schipment Code Package: " + packageData);
 		}
 		//
 
@@ -72,12 +73,20 @@ public class DataService {
 
 	}
 
+//	@Transactional
+//	public List<DataClient> findByShipCodeOrderByShipSeq(String shipCode) throws Exception {
+//		//
+//		List<DataClient> listClientData = dataClientRepository.findByShipCodeOrderByShipSeq(shipCode);
+//
+//		return listClientData;
+//	}
+	
 	@Transactional
-	public List<DataClient> findByShipCodeOrderByShipSeq(String shipCode) throws Exception {
+	public String  createFileCsvToSend(Long shipTabId) throws Exception {
 		//
-		List<DataClient> listClientData = dataClientRepository.findByShipCodeOrderByShipSeq(shipCode);
+		String nomeFile = dataClientRepository.createFileCsvToSend(shipTabId);
 
-		return listClientData;
+		return nomeFile;
 	}
 
 	@Transactional
@@ -92,15 +101,13 @@ public class DataService {
 	}
 
 	@Transactional
-	public String getLastShip() throws Exception {
+	public ShipTable getLastShip() throws Exception {
 		//
-		String ret = "";
+		
 		ShipTable last = shipTableRepository.getLastShip();
-		if (last != null) {
-			ret = last.getShipCode();
-		}
+		
 
-		return ret;
+		return last;
 	}
 
 	@Transactional
@@ -115,9 +122,14 @@ public class DataService {
 	}
 
 	@Transactional
-	public void deleteAllShip() throws Exception {
+	public void deleteAllShipTable() throws Exception {
 		shipTableRepository.deleteAll();
-		dataClientRepository.deleteAll();
+		
+	}
+	
+	@Transactional
+	public void deleteAllDataClientByIdShipCode(Long idShip) throws Exception {
+		dataClientRepository.deleteByIdShipTable(idShip);
 	}
 
 }

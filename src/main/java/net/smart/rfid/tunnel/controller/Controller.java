@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.opencsv.CSVWriter;
 
 import net.smart.rfid.tunnel.db.entity.DataClient;
+import net.smart.rfid.tunnel.db.entity.ShipTable;
 import net.smart.rfid.tunnel.model.PackageModel;
 import net.smart.rfid.tunnel.services.DataService;
 import net.smart.rfid.util.PropertiesUtil;
@@ -38,9 +39,9 @@ public class Controller {
 	public String sendDataToClient(@RequestBody PackageModel packageModel) throws Exception {
 		try {
 			
-			dataService.findStreamAndSaveDataClientBy(new Long(packageModel.getPackId()));
+			dataService.findStreamAndSaveDataClientBy(new Long(packageModel.getPackId()), packageModel.getPackageData());
 
-			return "ok";
+			return "OK";
 		} catch (Exception e) {
 			throw e;
 		}
@@ -67,63 +68,31 @@ public class Controller {
 	public String stopOfShipment() throws Exception {
 		try {
 			//
-			String message = "";
-			String shipCodeDB = dataService.getLastShip();
-			List<DataClient> listDataClient = dataService.findByShipCodeOrderByShipSeq(shipCodeDB);
-			if (listDataClient.size() > 0) {
-
-				// first create file object for file placed at location
-				// specified by filepath
-				long yourmilliseconds = System.currentTimeMillis();
-				SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HH.mm.ss");
-				Date resultdate = new Date(yourmilliseconds);
-				String dateFormat = sdf.format(resultdate);
-				File file = new File(PropertiesUtil.getPathLocal() + "/" + shipCodeDB + "_" + dateFormat + ".csv");
-				message = file.getName();
-				// create FileWriter object with file as parameter
-				FileWriter outputfile = new FileWriter(file);
-
-				// create CSVWriter with ';' as separator
-				CSVWriter writer = new CSVWriter(outputfile, ';', CSVWriter.NO_QUOTE_CHARACTER, CSVWriter.DEFAULT_ESCAPE_CHARACTER, CSVWriter.DEFAULT_LINE_END);
-				// create a List which contains String array
-				List<String[]> data = new ArrayList<String[]>();
-
-				data.add(new String[] { "tunnel", "packageData", "tid", "epc", "sku", "scandate" });
-
-				for (DataClient c : listDataClient) {
-					data.add(new String[] { c.getIdTunnel() + "", c.getPackageData(), c.getTid() ,c.getEpc(), c.getSku(), c.getDataForm() });
-				}
-				writer.writeAll(data);
-
-				// closing writer connection
-				writer.close();
-				message = message + " generated";
-
+			
+			ShipTable shipTable = dataService.getLastShip();
+			if (shipTable == null) {
+				throw new Exception("ShipCode Mandatory");
 			}
-			dataService.deleteAllShip();
-			return "OK " + message;
+			dataService.deleteAllShipTable();
+			String nomeFile = dataService.createFileCsvToSend(shipTable.getId());
+			String message = "OK " + nomeFile +  "Created";
+			return message;
 		} catch (Exception e) {
 			throw e;
 		}
 	}
 
-	
-
-	@PostMapping("/saveDataClient")
-	public String saveDataClient(@RequestParam Long packId) throws Exception {
-		try {
-			dataService.findStreamAndSaveDataClientBy(packId);
-			return "ok";
-		} catch (Exception e) {
-			throw e;
-		}
-	}
 
 	@GetMapping("/getLastShip")
 	public String getLastShip() throws Exception {
 		try {
-			String last = dataService.getLastShip();
-			return last;
+			String ret = "";
+			ShipTable last = dataService.getLastShip();
+			if (last != null) {
+				ret = last.getShipCode();
+			}
+			
+			return ret;
 		} catch (Exception e) {
 			throw e;
 		}
