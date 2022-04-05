@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import net.smart.rfid.tunnel.db.entity.DataClient;
+import net.smart.rfid.tunnel.db.entity.DataClientFtpConf;
 import net.smart.rfid.tunnel.db.entity.ShipTable;
+import net.smart.rfid.tunnel.db.repository.DataClientFtpConfRepository;
 import net.smart.rfid.tunnel.db.repository.DataClientRepository;
 import net.smart.rfid.tunnel.db.repository.ReaderStreamRepository;
 import net.smart.rfid.tunnel.db.repository.ReaderStreamRepository.ReaderStreamOnly;
@@ -22,7 +24,10 @@ import net.smart.rfid.util.WebSocketToClient;
 public class DataService {
 
 	private static final Logger logger = LogManager.getLogger(DataService.class);
-
+	
+	@Autowired
+	private DataClientFtpConfRepository dataClientFtpConfRepository;
+	
 	@Autowired
 	private ReaderStreamRepository readerStreamRepository;
 
@@ -102,13 +107,13 @@ public class DataService {
 
 	@Transactional
 	public ShipTable getLastShip() throws Exception {
-		//
-		
 		ShipTable last = shipTableRepository.getLastShip();
-		
-
 		return last;
 	}
+	
+	
+	
+	
 
 	@Transactional
 	public Long getMaxSeq() throws Exception {
@@ -130,6 +135,25 @@ public class DataService {
 	@Transactional
 	public void deleteAllDataClientByIdShipCode(Long idShip) throws Exception {
 		dataClientRepository.deleteByIdShipTable(idShip);
+	}
+	
+	@Transactional
+	public DataClientFtpConf  saveFtpConf(DataClientFtpConf ftpConf) throws Exception {
+		//
+		dataClientFtpConfRepository.save(ftpConf);
+
+		return ftpConf;
+	}
+	
+	@Transactional
+	public DataClientFtpConf getConfFtp() throws Exception {
+		DataClientFtpConf dataClientFtpConf =  null;
+		List<DataClientFtpConf> listConf = dataClientFtpConfRepository.findAll();
+		if (listConf.size() > 0) {
+			dataClientFtpConf = listConf.get(0);
+		}
+		//
+		return dataClientFtpConf;
 	}
 
 }

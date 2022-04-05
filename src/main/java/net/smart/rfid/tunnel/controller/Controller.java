@@ -1,16 +1,7 @@
 package net.smart.rfid.tunnel.controller;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,13 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opencsv.CSVWriter;
-
-import net.smart.rfid.tunnel.db.entity.DataClient;
+import net.smart.rfid.tunnel.db.entity.DataClientFtpConf;
 import net.smart.rfid.tunnel.db.entity.ShipTable;
 import net.smart.rfid.tunnel.model.PackageModel;
 import net.smart.rfid.tunnel.services.DataService;
-import net.smart.rfid.util.PropertiesUtil;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -97,5 +85,29 @@ public class Controller {
 			throw e;
 		}
 	}
+	
+	
+	@PostMapping("/saveFtpConf")
+	public String saveFtpConf(@RequestBody DataClientFtpConf ftpConf) throws Exception {
+		try {
+			
+			dataService.saveFtpConf(ftpConf);
 
+			return "OK";
+		} catch (Exception e) {
+			throw e;
+		}
+	}
+	
+	
+	
+	@GetMapping("/getConfFtp")
+	public DataClientFtpConf getConfFtp() throws Exception {
+		try {
+			DataClientFtpConf last = dataService.getConfFtp();
+			return last;
+		} catch (Exception e) {
+			throw e;
+		}
+	}
 }
