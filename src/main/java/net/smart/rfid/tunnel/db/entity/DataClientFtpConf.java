@@ -1,7 +1,5 @@
 package net.smart.rfid.tunnel.db.entity;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,6 +28,10 @@ public class DataClientFtpConf {
 	private String ftpUser;
 
 	private String ftpPsw;
+	
+	private String timeSendFile;
+	
+	private String timeDeleteFile;
 
 	public DataClientFtpConf() {
 	}
@@ -73,5 +75,23 @@ public class DataClientFtpConf {
 	public void setFtpPsw(String ftpPsw) {
 		this.ftpPsw = ftpPsw;
 	}
+
+	public String getTimeSendFile() {
+		return timeSendFile;
+	}
+
+	public void setTimeSendFile(String timeSendFile) {
+		this.timeSendFile = timeSendFile;
+	}
+
+	public String getTimeDeleteFile() {
+		return timeDeleteFile;
+	}
+
+	public void setTimeDeleteFile(String timeDeleteFile) {
+		this.timeDeleteFile = timeDeleteFile;
+	}
+	
+	
 
 }

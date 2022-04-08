@@ -3,19 +3,14 @@ package net.smart.rfid.tunnel.services;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
-import java.security.PublicKey;
 import java.util.List;
 
-import javax.crypto.Cipher;
 import javax.transaction.Transactional;
 
 import org.apache.logging.log4j.LogManager;
@@ -24,12 +19,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import com.jcraft.jsch.ChannelSftp;
-import com.jcraft.jsch.JSch;
-import com.jcraft.jsch.JSchException;
-import com.jcraft.jsch.Session;
-
+import net.schmizz.sshj.SSHClient;
+import net.schmizz.sshj.sftp.SFTPClient;
+import net.schmizz.sshj.transport.verification.PromiscuousVerifier;
+import net.schmizz.sshj.userauth.UserAuthException;
+import net.schmizz.sshj.userauth.keyprovider.KeyProvider;
+import net.schmizz.sshj.xfer.FileSystemFile;
+import net.smart.rfid.tunnel.db.entity.DataClientFtpConf;
 import net.smart.rfid.tunnel.db.entity.DataClientSendFile;
+import net.smart.rfid.tunnel.db.repository.DataClientFtpConfRepository;
 import net.smart.rfid.tunnel.db.repository.DataClientSendFileRepository;
 import net.smart.rfid.util.PropertiesUtil;
 
@@ -41,14 +39,18 @@ public class FileService {
 	@Autowired
 	private DataClientSendFileRepository dataClientSendFileRepository;
 
+	@Autowired
+	private DataClientFtpConfRepository dataClientFtpConfRepository;
+
 	@Scheduled(fixedRateString = "${cronExpression}")
 	@Transactional
 	public void sendFileWithSftp() {
 		logger.info("*********Start send file *************");
 		try {
+
 			String remoteDir = PropertiesUtil.getPathDestination();
-			ChannelSftp channelSftp = setupJsch();
-			channelSftp.connect();
+			SSHClient ssh = setupSshj();
+
 			//
 			List<DataClientSendFile> listDataSend = dataClientSendFileRepository.findByStatus(false);
 			//
@@ -56,9 +58,9 @@ public class FileService {
 				try {
 					File file = getFileByName(PropertiesUtil.getPathLocal(), dataClientSendFile.getNameFile());
 					//
-					InputStream inputStream = new FileInputStream(file);
-					channelSftp.put(inputStream, remoteDir + file.getName());
-					inputStream.close();
+					SFTPClient sftp = ssh.newSFTPClient();
+					sftp.put(new FileSystemFile(file), remoteDir + file.getName());
+					sftp.close();
 					//
 					// Sposto file pdf
 					logger.info("Move sent files from local path to a trash path ");
@@ -75,51 +77,72 @@ public class FileService {
 					logger.info("No file prenset");
 				}
 			}
-			channelSftp.exit();
+			ssh.disconnect();
 		} catch (Exception e) {
 			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 
 		logger.info("*********FINE*************");
 	}
 
-	private ChannelSftp setupJsch() throws JSchException {
-		JSch jsch = new JSch();
-		jsch.setKnownHosts(PropertiesUtil.getSshknownHosts() + "/known_hosts");
-		Session jschSession = jsch.getSession(PropertiesUtil.getUser(), PropertiesUtil.getHostIp(), new Integer(PropertiesUtil.getHostPort()));
-		jschSession.setPassword(PropertiesUtil.getPassword());
-		// jschSession.setConfig(null, null);
-		jschSession.connect();
-		return (ChannelSftp) jschSession.openChannel("sftp");
-	}
+	// private ChannelSftp setupJsch() throws Exception {
+	// JSch jsch = new JSch();
+	// Session jschSession = null;
+	// DataClientFtpConf confFtp = null;
+	// // Se esiste conf DB
+	// List<DataClientFtpConf> listConf = dataClientFtpConfRepository.findAll();
+	// if (listConf.size() > 0) {
+	// confFtp = listConf.get(0);
+	// jschSession = jsch.getSession(confFtp.getFtpUser(), confFtp.getFtpHost(), confFtp.getFtpPort().intValue());
+	// jschSession.setPassword(confFtp.getFtpPsw());
+	// } else {
+	// // else config from properties file
+	// jschSession = jsch.getSession(PropertiesUtil.getUser(), PropertiesUtil.getHostIp(), new
+	// Integer(PropertiesUtil.getHostPort()));
+	// jschSession.setPassword(PropertiesUtil.getPassword());
+	// }
+	// jsch.setKnownHosts(PropertiesUtil.getSshknownHosts() + "/known_hosts");
+	// //
+	// jschSession.connect();
+	// return (ChannelSftp) jschSession.openChannel("sftp");
+	// }
 
-	private File encryptFile(Path tempFile) {
-		File file = null;
+	private SSHClient setupSshj() throws Exception {
+		SSHClient client = new SSHClient();
 		try {
-			KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
-			generator.initialize(2048);
-			KeyPair pair = generator.generateKeyPair();
-			// PrivateKey privateKey = pair.getPrivate();
-			PublicKey publicKey = pair.getPublic();
-			// Publik key
-			// File publicKeyFile = new File("public.key");
-			// byte[] publicKeyBytes = Files.readAllBytes(publicKeyFile.toPath());
-			// KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-			// EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(publicKeyBytes);
-			// PublicKey publicKey = keyFactory.generatePublic(publicKeySpec);
-			//
-			byte[] fileBytes = Files.readAllBytes(tempFile);
-			Cipher encryptCipher = Cipher.getInstance("RSA");
-			encryptCipher.init(Cipher.ENCRYPT_MODE, publicKey);
-			byte[] encryptedFileBytes = encryptCipher.doFinal(fileBytes);
-			file = tempFile.toFile();
-			FileOutputStream stream = new FileOutputStream(file);
-			stream.write(encryptedFileBytes);
+
+			DataClientFtpConf confFtp = null;
+			// Se esiste conf DB
+			List<DataClientFtpConf> listConf = dataClientFtpConfRepository.findAll();
+			if (listConf.size() > 0) {
+				confFtp = listConf.get(0);
+				client.addHostKeyVerifier(new PromiscuousVerifier());
+				client.connect(confFtp.getFtpHost(), confFtp.getFtpPort().intValue());
+				//client.authPassword(confFtp.getFtpUser(), confFtp.getFtpPsw());
+			} else {
+				// else config from properties file
+				client.addHostKeyVerifier(new PromiscuousVerifier());
+				client.connect(PropertiesUtil.getHostIp(), new Integer(PropertiesUtil.getHostPort()));
+				//client.authPassword(PropertiesUtil.getUser(), PropertiesUtil.getPassword());
+			}
+			
+			try {
+				File privateKey = new File(PropertiesUtil.getSshknownHosts() + "/id_rsa");
+				KeyProvider keys = client.loadKeys(privateKey.getPath());
+				client.authPublickey(PropertiesUtil.getUser(), keys);
+				
+				//client.authPublickey(PropertiesUtil.getUser(), PropertiesUtil.getSshknownHosts()+"/");
+				
+			  } catch (UserAuthException e) {
+				  //e.printStackTrace();
+				  logger.error(e.getMessage());
+			  }
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.toString() + "-" + e.getMessage());
+			throw e;
 		}
-		return file;
+		return client;
 	}
 
 	private File[] getListFileOfDir(String dir) throws IOException {
