@@ -45,6 +45,7 @@ public class Controller {
 			}
 			//
 			dataService.save(shipCode, 0l);
+			dataService.startStopCommand(true);
 			message = "OK";
 			return message;
 		} catch (Exception e) {
@@ -56,7 +57,7 @@ public class Controller {
 	public String stopOfShipment() throws Exception {
 		try {
 			//
-			
+			dataService.startStopCommand(false);
 			ShipTable shipTable = dataService.getLastShip();
 			if (shipTable == null) {
 				throw new Exception("ShipCode Mandatory");

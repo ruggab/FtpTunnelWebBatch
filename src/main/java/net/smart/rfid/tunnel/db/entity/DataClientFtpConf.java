@@ -32,6 +32,11 @@ public class DataClientFtpConf {
 	private String timeSendFile;
 	
 	private String timeDeleteFile;
+	
+	private String ipWirama;
+	private String portCommand;
+	private String startCommand;
+	private String stopCommand;
 
 	public DataClientFtpConf() {
 	}
@@ -90,6 +95,38 @@ public class DataClientFtpConf {
 
 	public void setTimeDeleteFile(String timeDeleteFile) {
 		this.timeDeleteFile = timeDeleteFile;
+	}
+
+	public String getIpWirama() {
+		return ipWirama;
+	}
+
+	public void setIpWirama(String ipWirama) {
+		this.ipWirama = ipWirama;
+	}
+
+	public String getPortCommand() {
+		return portCommand;
+	}
+
+	public void setPortCommand(String portCommand) {
+		this.portCommand = portCommand;
+	}
+
+	public String getStartCommand() {
+		return startCommand;
+	}
+
+	public void setStartCommand(String startCommand) {
+		this.startCommand = startCommand;
+	}
+
+	public String getStopCommand() {
+		return stopCommand;
+	}
+
+	public void setStopCommand(String stopCommand) {
+		this.stopCommand = stopCommand;
 	}
 	
 	

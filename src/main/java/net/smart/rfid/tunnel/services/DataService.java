@@ -1,6 +1,7 @@
 package net.smart.rfid.tunnel.services;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.transaction.Transactional;
 
@@ -18,16 +19,17 @@ import net.smart.rfid.tunnel.db.repository.DataClientRepository;
 import net.smart.rfid.tunnel.db.repository.ReaderStreamRepository;
 import net.smart.rfid.tunnel.db.repository.ReaderStreamRepository.ReaderStreamOnly;
 import net.smart.rfid.tunnel.db.repository.ShipTableRepository;
+import net.smart.rfid.util.SocketWiramaClient;
 import net.smart.rfid.util.WebSocketToClient;
 
 @Service
 public class DataService {
 
 	private static final Logger logger = LogManager.getLogger(DataService.class);
-	
+
 	@Autowired
 	private DataClientFtpConfRepository dataClientFtpConfRepository;
-	
+
 	@Autowired
 	private ReaderStreamRepository readerStreamRepository;
 
@@ -43,7 +45,7 @@ public class DataService {
 		//
 		List<ReaderStreamOnly> listReaderStream = readerStreamRepository.getReaderStreamListByPackId(packId);
 		ShipTable schipTable = shipTableRepository.getLastShip();
-		
+
 		// schipTable
 		// shipTableRepository.
 		if (schipTable != null && StringUtils.hasText(schipTable.getShipCode())) {
@@ -78,16 +80,16 @@ public class DataService {
 
 	}
 
-//	@Transactional
-//	public List<DataClient> findByShipCodeOrderByShipSeq(String shipCode) throws Exception {
-//		//
-//		List<DataClient> listClientData = dataClientRepository.findByShipCodeOrderByShipSeq(shipCode);
-//
-//		return listClientData;
-//	}
-	
+	// @Transactional
+	// public List<DataClient> findByShipCodeOrderByShipSeq(String shipCode) throws Exception {
+	// //
+	// List<DataClient> listClientData = dataClientRepository.findByShipCodeOrderByShipSeq(shipCode);
+	//
+	// return listClientData;
+	// }
+
 	@Transactional
-	public String  createFileCsvToSend(Long shipTabId) throws Exception {
+	public String createFileCsvToSend(Long shipTabId) throws Exception {
 		//
 		String nomeFile = dataClientRepository.createFileCsvToSend(shipTabId);
 
@@ -102,7 +104,33 @@ public class DataService {
 		shipTable.setSeq(seq);
 		shipTable = shipTableRepository.save(shipTable);
 		//
+		//
 		return shipTable;
+	}
+
+	@Transactional
+	public void startStopCommand(boolean type) throws Exception {
+		// GET DataClientFtpConf
+		try {
+			DataClientFtpConf dataClientFtpConf = null;
+			List<DataClientFtpConf> listConf = dataClientFtpConfRepository.findAll();
+			if (listConf.size() > 0) {
+				dataClientFtpConf = listConf.get(0);
+			}
+			if (dataClientFtpConf != null && StringUtils.hasText(dataClientFtpConf.getIpWirama()) && StringUtils.hasText(dataClientFtpConf.getPortCommand())) {
+				SocketWiramaClient cwc = new SocketWiramaClient();
+				cwc.startConnection(dataClientFtpConf.getIpWirama(), new Long(dataClientFtpConf.getPortCommand()));
+				if (type) {
+					cwc.sendMessage(dataClientFtpConf.getStartCommand());
+				} else {
+					cwc.sendMessage(dataClientFtpConf.getStopCommand());
+				}
+
+				cwc.stopConnection();
+			}
+		} catch (Exception e) {
+			logger.error("Error on command Start Stop: " + e.toString() + "-" + e.getMessage());
+		}
 	}
 
 	@Transactional
@@ -110,10 +138,6 @@ public class DataService {
 		ShipTable last = shipTableRepository.getLastShip();
 		return last;
 	}
-	
-	
-	
-	
 
 	@Transactional
 	public Long getMaxSeq() throws Exception {
@@ -129,25 +153,25 @@ public class DataService {
 	@Transactional
 	public void deleteAllShipTable() throws Exception {
 		shipTableRepository.deleteAll();
-		
+
 	}
-	
+
 	@Transactional
 	public void deleteAllDataClientByIdShipCode(Long idShip) throws Exception {
 		dataClientRepository.deleteByIdShipTable(idShip);
 	}
-	
+
 	@Transactional
-	public DataClientFtpConf  saveFtpConf(DataClientFtpConf ftpConf) throws Exception {
+	public DataClientFtpConf saveFtpConf(DataClientFtpConf ftpConf) throws Exception {
 		//
 		dataClientFtpConfRepository.save(ftpConf);
 
 		return ftpConf;
 	}
-	
+
 	@Transactional
 	public DataClientFtpConf getConfFtp() throws Exception {
-		DataClientFtpConf dataClientFtpConf =  null;
+		DataClientFtpConf dataClientFtpConf = null;
 		List<DataClientFtpConf> listConf = dataClientFtpConfRepository.findAll();
 		if (listConf.size() > 0) {
 			dataClientFtpConf = listConf.get(0);
