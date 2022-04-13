@@ -1,10 +1,8 @@
 package net.smart.rfid.tunnel.services;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -30,6 +28,7 @@ import net.smart.rfid.tunnel.db.entity.DataClientSendFile;
 import net.smart.rfid.tunnel.db.repository.DataClientFtpConfRepository;
 import net.smart.rfid.tunnel.db.repository.DataClientSendFileRepository;
 import net.smart.rfid.util.PropertiesUtil;
+import net.smart.rfid.util.WebSocketToClient;
 
 @Service
 public class FileService {
@@ -50,7 +49,6 @@ public class FileService {
 
 			String remoteDir = PropertiesUtil.getPathDestination();
 			SSHClient ssh = setupSshj();
-
 			//
 			List<DataClientSendFile> listDataSend = dataClientSendFileRepository.findByStatus(false);
 			//
@@ -78,6 +76,10 @@ public class FileService {
 				}
 			}
 			ssh.disconnect();
+			//
+			logger.info("SendMessageOnFileEvent: Files sent");
+			WebSocketToClient.sendMessageOnFileEvent("Files sent");
+			//
 		} catch (Exception e) {
 			e.printStackTrace();
 			logger.error(e.getMessage());
@@ -119,6 +121,7 @@ public class FileService {
 				confFtp = listConf.get(0);
 				client.addHostKeyVerifier(new PromiscuousVerifier());
 				client.connect(confFtp.getFtpHost(), confFtp.getFtpPort().intValue());
+				logger.info("Host" + confFtp.getFtpHost());
 				//client.authPassword(confFtp.getFtpUser(), confFtp.getFtpPsw());
 			} else {
 				// else config from properties file
@@ -126,11 +129,13 @@ public class FileService {
 				client.connect(PropertiesUtil.getHostIp(), new Integer(PropertiesUtil.getHostPort()));
 				//client.authPassword(PropertiesUtil.getUser(), PropertiesUtil.getPassword());
 			}
-			
 			try {
+				
 				File privateKey = new File(PropertiesUtil.getSshknownHosts() + "/id_rsa");
 				KeyProvider keys = client.loadKeys(privateKey.getPath());
-				client.authPublickey(PropertiesUtil.getUser(), keys);
+				client.authPublickey(PropertiesUtil.getCertUser(), keys);
+				logger.info("User" + PropertiesUtil.getCertUser());
+				logger.info("Key" + keys);
 				
 				//client.authPublickey(PropertiesUtil.getUser(), PropertiesUtil.getSshknownHosts()+"/");
 				

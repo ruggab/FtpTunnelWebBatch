@@ -13,9 +13,11 @@ import org.springframework.util.StringUtils;
 
 import net.smart.rfid.tunnel.db.entity.DataClient;
 import net.smart.rfid.tunnel.db.entity.DataClientFtpConf;
+import net.smart.rfid.tunnel.db.entity.DataClientSendFile;
 import net.smart.rfid.tunnel.db.entity.ShipTable;
 import net.smart.rfid.tunnel.db.repository.DataClientFtpConfRepository;
 import net.smart.rfid.tunnel.db.repository.DataClientRepository;
+import net.smart.rfid.tunnel.db.repository.DataClientSendFileRepository;
 import net.smart.rfid.tunnel.db.repository.ReaderStreamRepository;
 import net.smart.rfid.tunnel.db.repository.ReaderStreamRepository.ReaderStreamOnly;
 import net.smart.rfid.tunnel.db.repository.ShipTableRepository;
@@ -38,6 +40,9 @@ public class DataService {
 
 	@Autowired
 	private DataClientRepository dataClientRepository;
+	
+	@Autowired
+	private DataClientSendFileRepository dataClientSendFileRepository;
 
 	@Transactional
 	public List<ReaderStreamOnly> findStreamAndSaveDataClientBy(Long packId, String packageData) throws Exception {
@@ -164,20 +169,31 @@ public class DataService {
 	@Transactional
 	public DataClientFtpConf saveFtpConf(DataClientFtpConf ftpConf) throws Exception {
 		//
+		if (ftpConf.getId() == null) {
+			DataClientFtpConf lastConf = dataClientFtpConfRepository.getConfFtp();
+			if (lastConf.getId() != null) {
+				ftpConf.setId(lastConf.getId());
+			}
+		}
 		dataClientFtpConfRepository.save(ftpConf);
-
+		//
 		return ftpConf;
 	}
 
 	@Transactional
 	public DataClientFtpConf getConfFtp() throws Exception {
-		DataClientFtpConf dataClientFtpConf = null;
-		List<DataClientFtpConf> listConf = dataClientFtpConfRepository.findAll();
-		if (listConf.size() > 0) {
-			dataClientFtpConf = listConf.get(0);
-		}
+		
+		DataClientFtpConf conf = dataClientFtpConfRepository.getConfFtp();
+		return conf;
+	}
+	
+	@Transactional
+	public List<DataClientSendFile> getListFile() throws Exception {
+		
+		List<DataClientSendFile> listFile = dataClientSendFileRepository.findAll();
+		
 		//
-		return dataClientFtpConf;
+		return listFile;
 	}
 
 }

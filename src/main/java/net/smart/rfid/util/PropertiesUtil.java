@@ -16,6 +16,7 @@ public class PropertiesUtil {
 	private static String hostIp;
 	private static String hostPort;
 	private static String sshknownHosts;
+	private static String certUser;
 	
 
 	public static String getCronExpression() {
@@ -89,6 +90,16 @@ public class PropertiesUtil {
 	public  void setSshknownHosts(String sshknownHosts) {
 		this.sshknownHosts = sshknownHosts;
 	}
+
+	public static String getCertUser() {
+		return certUser;
+	}
+
+	public  void setCertUser(String certUser) {
+		this.certUser = certUser;
+	}
+
+	
 	
 	
 

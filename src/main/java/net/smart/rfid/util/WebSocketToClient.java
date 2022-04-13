@@ -30,6 +30,24 @@ public class WebSocketToClient {
 			logger.error(e.toString() + " - " + e.getMessage());
 		}
 	}
+	
+	public static void sendMessageOnFileEvent(String jsonMessage) {
+		try {
+			Iterator<WebSocketSession> iterator = MyWebSocketHandler.tunnelUsers.iterator();
+			while (iterator.hasNext()) {
+				WebSocketSession wss = iterator.next();
+				logger.info(wss.getUri().getPath());
+				if (wss.getUri().getPath().contains("shipFile")) {
+					synchronized (wss) {
+						logger.info(jsonMessage);
+						wss.sendMessage(new TextMessage(jsonMessage));
+					}
+				}
+			}
+		} catch (Exception e) {
+			logger.error(e.toString() + " - " + e.getMessage());
+		}
+	}
 
 	
 

@@ -20,8 +20,8 @@ public interface DataClientFtpConfRepository extends JpaRepository<DataClientFtp
 //	
 //	public void deleteByIdShipTable(Long idShipTable);
 	
-//	@Query(value = "select * from data_client_ftp_conf limit 1" , nativeQuery = true)
-//	public DataClientFtpConf getConfFtp()
+	@Query(value = "select * from data_client_ftp_conf order by id desc limit 1 " , nativeQuery = true)
+	public DataClientFtpConf getConfFtp();
 	
 
 }
