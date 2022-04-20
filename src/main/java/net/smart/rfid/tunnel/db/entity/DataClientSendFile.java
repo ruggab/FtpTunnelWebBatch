@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * @author Gabriele
@@ -30,6 +31,9 @@ public class DataClientSendFile {
 	private boolean status;
 
 	private Date dataCreate;
+	
+	@Transient
+	private String dataCreateFormat;
 
 	public DataClientSendFile() {
 	}
@@ -42,7 +46,7 @@ public class DataClientSendFile {
 		this.id = id;
 	}
 
-	public String getDataForm() {
+	public String getDataCreateFormat() {
 		Date date = new Date();
 		String formattedDate = "";
 		if (this.dataCreate != null) {

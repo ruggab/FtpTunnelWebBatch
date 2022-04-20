@@ -15,8 +15,7 @@ public class PropertiesUtil {
 	private static String trashPath;
 	private static String hostIp;
 	private static String hostPort;
-	private static String sshknownHosts;
-	private static String certUser;
+	private static String sshCertPath;
 	
 
 	public static String getCronExpression() {
@@ -83,22 +82,15 @@ public class PropertiesUtil {
 		this.trashPath = trashPath;
 	}
 
-	public static String getSshknownHosts() {
-		return sshknownHosts;
+	public static String getSshCertPath() {
+		return sshCertPath;
 	}
 
-	public  void setSshknownHosts(String sshknownHosts) {
-		this.sshknownHosts = sshknownHosts;
+	public  void setSshCertPath(String sshCertPath) {
+		this.sshCertPath = sshCertPath;
 	}
 
-	public static String getCertUser() {
-		return certUser;
-	}
-
-	public  void setCertUser(String certUser) {
-		this.certUser = certUser;
-	}
-
+	
 	
 	
 	

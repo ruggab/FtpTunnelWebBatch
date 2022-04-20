@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,39 +37,37 @@ public class Controller {
 	private DataService dataService;
 
 	@PostMapping("/sendDataToClient")
-	public String sendDataToClient(@RequestBody PackageModel packageModel) throws Exception {
+	public ResponseEntity<String> sendDataToClient(@RequestBody PackageModel packageModel) throws Exception {
 		try {
-
 			dataService.findStreamAndSaveDataClientBy(new Long(packageModel.getPackId()), packageModel.getPackageData());
-
-			return "OK";
+			return ResponseEntity.ok("OK");
 		} catch (Exception e) {
-			throw e;
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 	}
 
 	@GetMapping("/startOfShipment")
-	public String startOfShipment(@RequestParam String shipCode) throws Exception {
+	public ResponseEntity<String> startOfShipment(@RequestParam String shipCode) throws Exception {
 		String message = "";
 		try {
 			if (StringUtils.isEmpty(shipCode)) {
 				message = "ShipCode Mandatory";
-				return message;
+				return ResponseEntity.ok(message);
 			}
 			//
 			dataService.save(shipCode, 0l);
 			dataService.startStopCommand(true);
 			message = "OK";
-			return message;
+			return ResponseEntity.ok(message);
 		} catch (Exception e) {
-			throw e;
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 	}
 
 	@GetMapping("/stopOfShipment")
-	public String stopOfShipment() throws Exception {
+	public ResponseEntity<String> stopOfShipment() throws Exception {
 		try {
-			//
+			//Gestione GPO on start/stop command
 			dataService.startStopCommand(false);
 			ShipTable shipTable = dataService.getLastShip();
 			if (shipTable == null) {
@@ -76,10 +75,13 @@ public class Controller {
 			}
 			dataService.deleteAllShipTable();
 			String nomeFile = dataService.createFileCsvToSend(shipTable.getId());
+			if (nomeFile.equalsIgnoreCase("KO")) {
+				throw new Exception("No tags read");
+			}
 			String message = "OK " + nomeFile + "Created";
-			return message;
+			return ResponseEntity.ok(message);
 		} catch (Exception e) {
-			throw e;
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 	}
 

@@ -12,6 +12,8 @@ public interface DataClientSendFileRepository extends JpaRepository<DataClientSe
 
 	public List<DataClientSendFile> findByStatus(boolean status);
 	
-
+	
+	
+	public List<DataClientSendFile> findAllByOrderByIdDesc();
 
 }

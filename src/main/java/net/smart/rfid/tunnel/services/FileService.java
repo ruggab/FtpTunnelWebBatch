@@ -45,10 +45,11 @@ public class FileService {
 	@Transactional
 	public void sendFileWithSftp() {
 		logger.info("*********Start send file *************");
+		SSHClient ssh = null;
 		try {
 
 			String remoteDir = PropertiesUtil.getPathDestination();
-			SSHClient ssh = setupSshj();
+			ssh = setupSshj();
 			//
 			List<DataClientSendFile> listDataSend = dataClientSendFileRepository.findByStatus(false);
 			//
@@ -75,7 +76,7 @@ public class FileService {
 					logger.info("No file prenset");
 				}
 			}
-			ssh.disconnect();
+			
 			//
 			logger.info("SendMessageOnFileEvent: Files sent");
 			WebSocketToClient.sendMessageOnFileEvent("Files sent");
@@ -83,8 +84,13 @@ public class FileService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			logger.error(e.getMessage());
+		} finally {
+			try {
+				ssh.disconnect();
+			} catch (Exception e2) {
+				logger.error(e2.getMessage());
+			}
 		}
-
 		logger.info("*********FINE*************");
 	}
 
@@ -113,32 +119,37 @@ public class FileService {
 	private SSHClient setupSshj() throws Exception {
 		SSHClient client = new SSHClient();
 		try {
-
 			DataClientFtpConf confFtp = null;
 			// Se esiste conf DB
 			List<DataClientFtpConf> listConf = dataClientFtpConfRepository.findAll();
+			String userFtp, psswFtp, hostFtp, portFtp = "";
 			if (listConf.size() > 0) {
 				confFtp = listConf.get(0);
-				client.addHostKeyVerifier(new PromiscuousVerifier());
-				client.connect(confFtp.getFtpHost(), confFtp.getFtpPort().intValue());
-				logger.info("Host" + confFtp.getFtpHost());
-				//client.authPassword(confFtp.getFtpUser(), confFtp.getFtpPsw());
+				userFtp = confFtp.getFtpUser();
+				psswFtp = confFtp.getFtpPsw();
+				hostFtp = confFtp.getFtpHost();
+				portFtp = confFtp.getFtpPort().toString();
 			} else {
-				// else config from properties file
-				client.addHostKeyVerifier(new PromiscuousVerifier());
-				client.connect(PropertiesUtil.getHostIp(), new Integer(PropertiesUtil.getHostPort()));
-				//client.authPassword(PropertiesUtil.getUser(), PropertiesUtil.getPassword());
+				userFtp = PropertiesUtil.getUser();
+				psswFtp = PropertiesUtil.getPassword();
+				hostFtp = PropertiesUtil.getHostIp();
+				portFtp = PropertiesUtil.getHostPort();
 			}
+			logger.info("User:" + userFtp);
+			logger.info("Psw:" + psswFtp);
+			logger.info("hostFtp:" + hostFtp);
+			logger.info("portFtp:" + portFtp);
 			try {
+				client.addHostKeyVerifier(new PromiscuousVerifier());
+				client.connect(hostFtp, new Integer(portFtp));
+				//La seguente istruzione vinene commentata pernche non necessaria se si usa il certificato
+				//client.authPassword(PropertiesUtil.getUser(), PropertiesUtil.getPassword());
 				
-				File privateKey = new File(PropertiesUtil.getSshknownHosts() + "/id_rsa");
-				KeyProvider keys = client.loadKeys(privateKey.getPath());
-				client.authPublickey(PropertiesUtil.getCertUser(), keys);
-				logger.info("User" + PropertiesUtil.getCertUser());
+				File privateKey = new File(PropertiesUtil.getSshCertPath() + "/id_rsa");
+				logger.info("PATH: " + privateKey.getPath());
+				KeyProvider keys = client.loadKeys(privateKey.getPath(), psswFtp);
 				logger.info("Key" + keys);
-				
-				//client.authPublickey(PropertiesUtil.getUser(), PropertiesUtil.getSshknownHosts()+"/");
-				
+				client.authPublickey(userFtp, keys);
 			  } catch (UserAuthException e) {
 				  //e.printStackTrace();
 				  logger.error(e.getMessage());

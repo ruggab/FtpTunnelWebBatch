@@ -171,7 +171,7 @@ public class DataService {
 		//
 		if (ftpConf.getId() == null) {
 			DataClientFtpConf lastConf = dataClientFtpConfRepository.getConfFtp();
-			if (lastConf.getId() != null) {
+			if (lastConf !=null && lastConf.getId() != null) {
 				ftpConf.setId(lastConf.getId());
 			}
 		}
@@ -190,7 +190,7 @@ public class DataService {
 	@Transactional
 	public List<DataClientSendFile> getListFile() throws Exception {
 		
-		List<DataClientSendFile> listFile = dataClientSendFileRepository.findAll();
+		List<DataClientSendFile> listFile = dataClientSendFileRepository.findAllByOrderByIdDesc();
 		
 		//
 		return listFile;
