@@ -39,6 +39,7 @@ public class Controller {
 	@PostMapping("/sendDataToClient")
 	public ResponseEntity<String> sendDataToClient(@RequestBody PackageModel packageModel) throws Exception {
 		try {
+			logger.info(packageModel.getPackId() + "-" + packageModel.getPackageData());
 			dataService.findStreamAndSaveDataClientBy(new Long(packageModel.getPackId()), packageModel.getPackageData());
 			return ResponseEntity.ok("OK");
 		} catch (Exception e) {
@@ -50,6 +51,7 @@ public class Controller {
 	public ResponseEntity<String> startOfShipment(@RequestParam String shipCode) throws Exception {
 		String message = "";
 		try {
+			logger.info("startOfShipment");
 			if (StringUtils.isEmpty(shipCode)) {
 				message = "ShipCode Mandatory";
 				return ResponseEntity.ok(message);
